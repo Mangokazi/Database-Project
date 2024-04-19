@@ -320,49 +320,53 @@ ul li p {
 }
 
 .responsive-table {
-  border-radius: 3px;
-  padding: 25px 30px;
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 25px;
-}
+    li {
+      border-radius: 3px;
+      padding: 25px 30px;
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 25px;
+    
+  }
 
-.table-header {
-  font-size: 14px;
-  text-transform: uppercase;
-  letter-spacing: 0.03em;
-}
+  .table-header {
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    background-color: #349E97;
+  }
 
-.table-row {
-  background-color: #ffffff;
-  box-shadow: 0px 0px 9px 0px rgba(0,0,0,0.1);
-}
+  .table-row {
+    box-shadow: 0px 0px 9px 0px rgba(0,0,0,0.4);
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(5px);
+  }
 
-.col-1 {
-  flex-basis: 10%;
-}
-.col-2 {
-  flex-basis: 40%;
-}
-.col-3 {
-  flex-basis: 25%;
-}
-.col-4 {
-  flex-basis: 25%;
-}
+  .col-1 {
+    flex-basis: 10%;
+  }
+  .col-2 {
+    flex-basis: 40%;
+  }
+  .col-3 {
+    flex-basis: 25%;
+  }
+  .col-4 {
+    flex-basis: 25%;
+  }
 
-.col-5 {
-  flex-basis: 10%;
-}
-.col-6 {
-  flex-basis: 40%;
-}
+  .col-5 {
+    flex-basis: 10%;
+  }
+  .col-6 {
+    flex-basis: 40%;
+  }
 
-.col-7 {
-  flex-basis: 10%;
+  .col-7 {
+    flex-basis: 10%;
+  }
+
 }
-
-
 
 
 
