@@ -311,4 +311,31 @@ ul li p {
   margin-right: 5px;
 }
 
+.patients-tbl {
+  position: absolute;
+  left: 50%;
+  top: 30%;
+  transform: translate(-50%, -50%);
+  
+}
 
+table {
+  width: 100%;
+
+}
+
+th, td {
+  
+  padding: 20px;
+  font-size: 15px;
+  transition: background-color 1s;
+  
+}
+
+th {
+  font-weight: bold;
+}
+
+tr:hover {
+  background-color: #349E97;
+}
