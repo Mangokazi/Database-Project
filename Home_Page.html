@@ -33,40 +33,27 @@
                     <span>Add Patient</span>
             </button>
         </div>
-        <div class="patients-tbl">
-            <table class="table">
-                <thead>
-                    <tr>
-                        <th>Name</th>
-                        <th>Surname</th>
-                        <th>Gender</th>
-                        <th>Age</th>
-                        <th>Address</th>
-                        <th>Phone number</th>
-                        <th>Diagnosis</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Larry</td>
-                        <td>Smith</td>
-                        <td>Male</td>
-                        <td>40</td>
-                        <td>19 Durham Avenue, Salt River</td>
-                        <td>+27 765 7992</td>
-                        <td>Hypertension</td>
-                    </tr>
-                    <tr>
-                        <td>Celine</td>
-                        <td>Martin</td>
-                        <td>Female</td>
-                        <td>35</td>
-                        <td>14 Salt River Road, Salt River</td>
-                        <td>+27 689 7892</td>
-                        <td>Heart Disease</td>
-                    </tr>
-                </tbody>
-            </table>
+        <div class="container">
+            <ul class="responsive-table">
+                <li class="table-header">
+                    <div class="col col-1">Name</div>
+                    <div class="col col-2">Surname</div>
+                    <div class="col col-3">Age</div>
+                    <div class="col col-4">Gender</div>
+                    <div class="col col-5">Address</div>
+                    <div class="col col-6">Phone Number</div>
+                    <div class="col col-7">Diagnosis</div>
+                </li>
+                <li class="table-row">
+                    <div class="col col-1" data-label="Name">Larry</div>
+                    <div class="col col-2" data-label="Surname">Smith</div>
+                    <div class="col col-3" data-label="Age">40</div>
+                    <div class="col col-4" data-label="Gender">Male</div>
+                    <div class="col col-5" data-label="Address">19 Durham Avenue, Salt River</div>
+                    <div class="col col-6" data-label="Phone Number">+27 765 7992</div>
+                    <div class="col col-7" data-label="Diagnosis">Hypertension</div>
+                </li>
+            </ul>
         </div>
    </div> 
 </body>
