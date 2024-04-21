@@ -28,7 +28,7 @@
             </ul>
         </div>
         <div>
-            <button class="patients-btn">
+            <button class="patients-btn" id="add-patient-btn">
                 <img src="Images/add-user.png" alt="" class="add-user-img">
                     <span>Add Patient</span>
             </button>
@@ -64,6 +64,11 @@
                 </li>
             </ul>
         </div>
-   </div> 
+   </div>
+   <script>
+    document.getElementById("add-patient-btn").addEventListener("click", function() {
+        window.location.href="Patient.html";
+    })
+   </script> 
 </body>
 </html>
