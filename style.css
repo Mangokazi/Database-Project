@@ -174,7 +174,7 @@ label {
   text-decoration: underline; /* Add underline on hover */
 }
 
-/**Home page css*/
+/**Patient table css*/
 .header {
   width:100%;
   height: 100vh;
@@ -344,31 +344,30 @@ ul li p {
   }
 
   .col-1 {
-    flex-basis: 10%;
+    flex-basis: 30%;
   }
   .col-2 {
-    flex-basis: 40%;
+    flex-basis: 30%;
   }
   .col-3 {
-    flex-basis: 25%;
+    flex-basis: 30%;
   }
   .col-4 {
-    flex-basis: 25%;
+    flex-basis: 30%;
   }
-
   .col-5 {
-    flex-basis: 10%;
+    flex-basis: 30%;
   }
   .col-6 {
-    flex-basis: 40%;
+    flex-basis: 50%;
   }
-
   .col-7 {
-    flex-basis: 10%;
+    flex-basis: 30%;
   }
 
 }
 
+/**patient form css **/
 .form {
   border-radius: 3px;
     padding: 25px 30px;
@@ -386,34 +385,12 @@ form {
     padding-right: 10px;
 }
 
-
-
-/*
-.patients-tbl {
-  position: absolute;
-  left: 50%;
-  top: 30%;
-  transform: translate(-50%, -50%);
+.gender-container input[type=radio] {
+  display:inline-block;
+  vertical-align: middle;
   
 }
 
-table {
-  width: 100%;
-
+.gender-container {
+  display:inline-block;
 }
-
-th, td {
-  
-  padding: 20px;
-  font-size: 15px;
-  transition: background-color 1s;
-  
-}
-
-th {
-  font-weight: bold;
-}
-
-tr:hover {
-  background-color: #349E97;
-}*/
