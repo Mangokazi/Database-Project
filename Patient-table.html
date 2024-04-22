@@ -58,7 +58,7 @@
                     <div class="col col-2" data-label="Surname">Steward</div>
                     <div class="col col-3" data-label="Age">30</div>
                     <div class="col col-4" data-label="Gender">Female</div>
-                    <div class="col col-5" data-label="Address">11 Salt River Road, Salt River</div>
+                    <div class="col col-5" data-label="Address">11 Salt River Rd, Salt River</div>
                     <div class="col col-6" data-label="Phone Number">+27 725 7932</div>
                     <div class="col col-7" data-label="Diagnosis">Heart Disease</div>
                 </li>
