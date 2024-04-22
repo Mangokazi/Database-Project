@@ -13,7 +13,7 @@
                 <img src="Images/user.png" class="user-img">
                 <div>
                     <h2>Ardaciti</h2>
-                    <p>davidm@xyz.com</p>
+                    <p>ardacitim@xyz.com</p>
                 </div>
                 <img src="Images/star.png" class="star-img">
             </div>
@@ -50,7 +50,7 @@
                     </tr>
                     <tr>
                         <td><label for="phone-number">Phone number:</label></td>
-                        <td><input type="tel" id="phone-number" name="phone number" placeholder="051 415 2451" required></td>
+                        <td><input type="tel" id="phone-number" name="phone number" placeholder="071 415 2451" required></td>
                     </tr>
                     <tr>
                         <td><label for="email">Email:</label></td>
