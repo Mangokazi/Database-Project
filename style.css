@@ -385,6 +385,26 @@ ul li p {
   padding-right: 10px;
 }
 
+#survey_form {
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 20px;
+  margin-top: 30px;
+}
+
+.survey_btn {
+  width: 200px;
+  background-color: white;
+  color: black;
+  border: 2px solid #349E97;
+  position: absolute;
+  border-radius: 10px;
+  padding: 10px;
+    
+}
 
 
 
