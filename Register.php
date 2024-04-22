@@ -8,6 +8,7 @@
    
 </head>
 <body>
+
   <header class="banner">
     <div class="container">
         <div class="logo">
@@ -24,22 +25,23 @@
 </header>
 <div id="wrapper" >
     
-  <form>
+  <form method = 'post'>
     <input type="radio" id="login" name="action" value="login" checked>
     <input type="radio" id="register" name="action" value="register">
     <input type="radio" id="reset" name="action" value="reset">
     <div id="inputs">
       <div>
-        <input type="text" placeholder="email" autofocus>
+        <input type="email" name = "username" placeholder="email" autofocus>
         <div>
-          <input type="password" placeholder="password">
+          <input type="password" name = "user"placeholder="password">
           <div>
-            <input type="password" placeholder="repeat password">
+            <input type="password" name="user"placeholder="repeat password ">
             <input type="submit" value="reset password">
             <div>
-              <input type="submit" value="register">
-              <input type="submit" value="login">
+              <input type="submit"name = "save" value="register">
+              <input type="submit" name ="save" value="login">
             </div>
+            
           </div>
         </div>
       </div>
@@ -50,10 +52,78 @@
       <label for="login"><span>Back</span></label>
       <label for="register">Not registered? <span>Create an account</span></label>
     </div>
-  </form>
+ 
   
   </div>
     
   
   </body>
 </html>
+</form>
+
+<?php
+
+
+
+require_once'connection.php';
+
+
+
+ $username  = $user= " ";
+
+
+
+if(isset($_POST['username']))
+
+{
+
+    $username= $_POST['username'];
+
+
+	$paused = $_POST['user'];
+
+
+
+
+}
+
+
+
+
+
+
+if(isset($_POST['save']))
+
+{
+
+
+
+$query = "INSERT INTO logging(username,password)VALUES('$username','$user')";
+
+
+
+$result = $con->query($query);
+
+
+
+if(!$result)
+
+  {die($con->error);
+
+        
+
+}
+
+else
+
+{
+
+
+
+echo"alert('Information successfully submitted!')";
+
+}
+
+}
+
+?>
