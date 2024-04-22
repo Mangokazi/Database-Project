@@ -367,30 +367,25 @@ ul li p {
 
 }
 
-/**patient form css **/
+/**patient form css */
 .form {
   border-radius: 3px;
-    padding: 25px 30px;
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 25px;
-    right: 20px;
+  padding: 25px 30px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 25px;
+  right: 20px;
 }
 
 form {
   max-width: 1000px;
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 10px;
-    padding-right: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
-.gender-container input[type=radio] {
-  display:inline-block;
-  vertical-align: middle;
-  
-}
 
-.gender-container {
-  display:inline-block;
-}
+
+
+
