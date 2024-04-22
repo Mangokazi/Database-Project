@@ -74,7 +74,7 @@
                     </tr>
                     <tr>
                         <td><label for="address">Address:</label></td>
-                        <td><textarea id="address" name="address" required ></textarea></td>
+                        <td><textarea id="address" name="address" type="text" required ></textarea></td>
                     </tr>
                     <tr>
                         <td></td>
