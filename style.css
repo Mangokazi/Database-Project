@@ -83,7 +83,7 @@ input {
     color: #FFFEFC;
     cursor: pointer;
   }
-  &[type=radio] { display: none; }
+ 
 }
 
 input:checked {

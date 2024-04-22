@@ -12,7 +12,7 @@
             <div class="user">
                 <img src="Images/user.png" class="user-img">
                 <div>
-                    <h2>David M</h2>
+                    <h2>Ardaciti</h2>
                     <p>davidm@xyz.com</p>
                 </div>
                 <img src="Images/star.png" class="star-img">
@@ -74,7 +74,7 @@
                     </tr>
                     <tr>
                         <td><label for="address">Address:</label></td>
-                        <td><textarea id="address" name="address" required style="width: 100%;"></textarea></td>
+                        <td><textarea id="address" name="address" required ></textarea></td>
                     </tr>
                     <tr>
                         <td></td>
