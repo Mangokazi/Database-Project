@@ -23,15 +23,15 @@
                 <li><img src="Images/dashboard.png" alt="">
                     <p>Dashboard</p>
                 </li>
-                <li><img src="Images/members.png" alt="">
+                <a href="Patient-table.php"><li><img src="Images/members.png" alt="">
                     <p>Patients</p>
-                </li>
+                </li></a>
                 <li><img src="Images/reports.png" alt="">
                     <p>Reports</p>
                 </li>
-                <li><img src="Images/setting.png" alt="">
-                    <p>Settings</p>
-                </li>
+                <a href="survey.php"><li><img src="Images/survey.png" alt="">
+                    <p>Survey</p>
+                </li></a>
             </ul>
             <ul>
                 <li><img src="Images/logout.png" alt="">
@@ -40,7 +40,7 @@
             </ul>
         </div>
         <form action="/submit_survey" method="post" id="survey_form">
-        <h2>Medical Survey</h2>
+        <h3>Medical Survey</h3>
         <table class="survey_table">
             <tr>
                 <td>

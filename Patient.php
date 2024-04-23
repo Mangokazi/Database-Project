@@ -6,7 +6,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="header">
     <div class="header">
         <div class="side-nav">
             <div class="user">
@@ -21,15 +21,15 @@
                 <li><img src="Images/dashboard.png" alt="">
                     <p>Dashboard</p>
                 </li>
-                <li><img src="Images/members.png" alt="">
+                <a href="Patient-table.php"><li><img src="Images/members.png" alt="">
                     <p>Patients</p>
-                </li>
+                </li></a>
                 <li><img src="Images/reports.png" alt="">
                     <p>Reports</p>
                 </li>
-                <li><img src="Images/setting.png" alt="">
-                    <p>Settings</p>
-                </li>
+                <a href="survey.php"><li><img src="Images/survey.png" alt="">
+                    <p>Survey</p>
+                </li></a>
             </ul>
             <ul>
                 <li><img src="Images/logout.png" alt="">
@@ -79,7 +79,7 @@
                     </tr>
                     <tr>
                         <td></td>
-                        <td><button type="submit" name = 'submit'>Submit</button></td>
+                        <td><button type="submit" name ='submit'>Submit</button></td>
                     </tr>
                 </table>
             
