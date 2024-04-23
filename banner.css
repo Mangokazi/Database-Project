@@ -1,0 +1,47 @@
+/* Basic styles for banner */
+.my_banner {
+    background-color: #333; /* Background color for the banner */
+    color: white; /* Text color for banner content */
+    padding: 30px 0; /* Add padding to the banner */
+  }
+  
+  /* Styles for container inside the banner */
+  .my_banner .my_container {
+    width: 80%; /* Set container width */
+    margin: 0 auto; /* Center the container */
+    display: flex;
+    justify-content: space-between; /* Space elements evenly */
+    align-items: center; /* Center items vertically */
+  }
+  
+  /* Styles for logo */
+  .my_logo img {
+    width: 100px; /* Adjust logo width */
+  }
+  
+  /* Styles for navigation links */
+  .my_banner nav ul {
+    list-style-type: none; /* Remove default list styling */
+    margin: 0;
+    padding: 0;
+  }
+  
+  .my_banner nav ul li {
+    display: inline; /* Display list items horizontally */
+  }
+  
+  .my_banner nav ul li a {
+    color: white; /* Text color for navigation links */
+    text-decoration: none; /* Remove underline from links */
+    margin-left: 20px; /* Add spacing between links */
+  }
+  
+  .my_banner nav ul li:first-child a {
+    margin-left: 0; /* Remove left margin from the first link */
+  }
+  
+  .my_banner nav ul li a:hover {
+    text-decoration: underline; /* Add underline on hover */
+  }
+  
+  
