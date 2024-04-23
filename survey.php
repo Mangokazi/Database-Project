@@ -193,14 +193,20 @@ if(isset($_POST['illness']))
 
 	$hospital_checkups= $_POST['hospital_checkups'];
 
-	$causes= $_POST['email'];
+	$causes= $_POST['causes'];
     $treatment = $_POST['treatment'];
 
-	$gender = $_POST['gender'];
+	$obtain_medication= $_POST['obtain_medication'];
 
-	$diagnosis= $_POST['diagnosis'];
+	$medication= $_POST['medication'];
 
-	$address= $_POST['address'];
+	$facilities= $_POST['facilities'];
+    $queues= $_POST['queues'];
+
+	$defaulted_medication= $_POST['defaulted_medication'];
+
+	$defaulted_reasons= $_POST['defaulted_reasons'];
+
 
 
 
@@ -214,7 +220,7 @@ if(isset($_POST['submit']))
 
 
 
-$query = "INSERT INTO survey(name,hospital_visits,hospital_checkups,causes,treatment,gender,diagnosis,address)VALUES('$name','$hospital_visits',' $hospital_checkups','$causes',' $treatment',' $gender','$diagnosis','$address')";
+$query = "INSERT INTO survey(illness,hospital_visits,hospital_checkups,causes,treatment,obtain_medication,medication,facilities,queuesdefaulted_medication,defaulted_reasons)VALUES('$illness','$hospital_visits',' $hospital_checkups','$causes',' $treatment',' $obtain_medication','$medication','$facilities'' $queues','$defaulted_medication','$defaulted_reasons',)";
 
 
 

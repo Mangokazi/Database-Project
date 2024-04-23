@@ -1,6 +1,3 @@
-
-
-
 <html>
     <head>
         <title>Login</title>
@@ -16,9 +13,7 @@
                 <input type="text" id="user" name="username" placeholder = "username"></br></br>
             
                 <input type="password" id="pass" name="password" placeholder="password"></br></br>
-                <input type="submit" id="btn" value="Login" name = "submit"/>
-        
-       
+                <input type="submit" id="btn" value="Login" name = "submit">
         <div id="labels">
      
       <label for="reset">Password lost? <span>Reset</span></label>
