@@ -3,64 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Register</title>
+    <title>Login Form</title>
     <link rel="stylesheet" href="style.css">
-   
 </head>
 <body>
-
-  <header class="banner">
-    <div class="container">
-        <div class="logo">
-            <img src="logo.png" alt="Logo">
-        </div>
-        <nav>
-            <ul>
-                <li><a href="Patient-table.html">Home</a></li>
-                <li><a href="#">About Us</a></li>
-                <li><a href="#">Contact Us</a></li>
-            </ul>
-        </nav>
-    </div>
-</header>
-<div id="wrapper" >
-    
-  <form method = 'post'>
-    <input type="radio" id="login" name="action" value="login" checked>
-    <input type="radio" id="register" name="action" value="register">
-    <input type="radio" id="reset" name="action" value="reset">
-    <div id="inputs">
-      <div>
-        <input type="email" name = "username" placeholder="email" autofocus>
-        <div>
-          <input type="password" name = "password"placeholder="password">
-          <div>
-            <input type="password" name="password"placeholder="repeat password ">
-            <input type="submit" value="reset password">
-            <div>
-              <input type="submit"name = "save" value="register">
-              <input type="submit" name ="save" value="login">
+    <div class="background-image">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-6">
+                    <section class="login-form">
+                        <form id="account" method="post" action="New.html">
+                            <h2>Welcome back!</h2>
+                            <hr />
+                            <div class="error-message" style="display: none;">
+                                Invalid email or password!
+                            </div>
+                            <div class="form-group">
+                                <label for="inputEmail">Email</label>
+                                <input id="inputEmail" type="email" name="email" class="form-control" autocomplete="username" aria-required="true" placeholder="name@example.com" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="inputPassword">Password</label>
+                                <input id="inputPassword" type="password" name="password" class="form-control" autocomplete="current-password" aria-required="true" placeholder="password" required>
+                            </div>
+                            <div class="form-check mb-3">
+                                <input id="inputRememberMe" type="checkbox" name="remember_me" class="form-check-input">
+                                <label class="form-check-label" for="inputRememberMe">Remember Me</label>
+                            </div><br>
+                            <div class="text-center">
+                             
+                                <button id="login-submit" type="submit" class="btn btn-primary">Log in</button>
+                            </div>
+                        </form>
+                    </section>
+                </div>
             </div>
-            
-          </div>
         </div>
-      </div>
     </div>
-    <div id="labels">
-      <label for="login">Already registered? <span>Login</span></label>
-      <label for="reset">Password lost? <span>Reset</span></label>
-      <label for="login"><span>Back</span></label>
-      <label for="register">Not registered? <span>Create an account</span></label>
-    </div>
- 
-  
-  </div>
-    
-  
-  </body>
+</body>
 </html>
-</form>
-
 <?php
 
 
@@ -88,7 +69,7 @@ if(isset($_POST['username']))
 }
 
 
-if(isset($_POST['save']))
+if(isset($_POST['submit']))
 
 {
 
@@ -110,16 +91,6 @@ if(!$result)
 
 }
 
-else
-
-{
-
-
-
-echo"alert('Information successfully submitted!')";
 
 }
-
-}
-
 ?>
