@@ -1,7 +1,8 @@
 body, html {
   margin: 0;
-  padding: 0;
   height: 100%;
+  padding: 0;
+  
 }
 
 .background-image {
@@ -67,12 +68,23 @@ body, html {
 
 /**Patient table css - side nav*/
 
+a {
+  text-decoration: none; /* Remove underline */
+  color: black; /* Set link color */
+}
+
 .header {
   width:100%;
   height: 100vh;
   background-image: url(Images/mybackground2.jpg);
-  background-position: center;
+  background-position: center top;
   background-size: cover;
+  margin: 0;
+  padding: 0;
+  background-repeat: no-repeat;
+}
+body.header{
+  background-image: url(Images/mybackground2.jpg);
 }
 .side-nav {
   width: 110px;
@@ -264,11 +276,19 @@ input {
 
 /** survey form **/
 
+h3 {
+  color: #349E97;
+  margin: 0;
+  margin-bottom: 20px;
+  font-size: 50px;
+}
+
 #survey_form {
   max-width: 1000px;
   margin: auto auto; /* Center the form horizontally and add top margin */
   padding: 20px 10px; /* Adjust padding as needed */
   margin-left: 500px;
+  font-size: 20px;
 }
 
 .survey_btn {
@@ -279,6 +299,8 @@ input {
   position: absolute;
   border-radius: 10px;
   padding: 10px;
+  margin-top: 15px;
+  margin-left: 150px;
 
 }
 

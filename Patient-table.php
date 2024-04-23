@@ -19,9 +19,13 @@
             </div>
             <ul>
                 <li><img src="Images/dashboard.png" alt=""><p>Dashboard</p></li>
-                <li><img src="Images/members.png" alt=""><p>Patients</p></li>
+                <a href="Patient-table.php"><li><img src="Images/members.png" alt="">
+                    <p>Patients</p>
+                </li></a>
                 <li><img src="Images/reports.png" alt=""><p>Reports</p></li>
-                <li><img src="Images/setting.png" alt=""><p>Settings</p></li>
+                <a href="survey.php"><li><img src="Images/survey.png" alt="">
+                    <p>Survey</p>
+                </li></a>
             </ul>
             <ul>
                 <li><img src="Images/logout.png" alt=""><p>Logout</p></li>
