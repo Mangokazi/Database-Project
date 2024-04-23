@@ -11,7 +11,7 @@
         
         <div id="form">
             <h1>Login Form</h1>
-            <form name="form"  method="POST">
+            <form name="form"  method="POST" action="Patient-table.php">
                 <label>Username: </label>
                 <input type="text" id="user" name="username"></br></br>
                 <label>Password: </label>
