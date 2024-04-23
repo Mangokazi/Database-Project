@@ -43,15 +43,31 @@
         <h2>Medical Survey</h2>
         <table class="survey_table">
             <tr>
-                <label for="chronic-diseases">Do you have any chronic diseases?</label>
-                <select name="illness" id="chronic-diseases">
-                    <option value="yes" id="">Yes</option>
-                    <option value="no" id="">No</option>
-                </select>
+                <td>
+                    <label for="chronic-diseases">Do you have any chronic diseases?</label>
+                    <select name="chronic-diseases" id="chronic-diseases" onchange="showChronicDiseaseOptions()">
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
+                    add options for chronic diseases
+                    </select>
+                </td>
             </tr>
+            <tr id="chronic-disease-options" style="display: none;">
+            <td>
+                <label for="chronic-disease-list">Select chronic diseases:</label>
+                <select name="chronic-disease-list" id="chronic-disease-list">
+                    <option value="cancer">Cancer</option>
+                    <option value="asthma">Asthma</option>
+                    <option value="high_blood_pressure">High Blood Pressure</option>
+                    <option value="arthritis">Arthritis</option>
+                    <option value="other">Other</option>
+                </select>
+                <input type="text" name="other-chronic-disease" id="other-chronic-disease" placeholder="Enter other chronic disease" style="display: none;">
+            </td>
+        </tr>
             <tr>
                 <label for="hospital-visits">How often do you go to the hospital?</label>
-                <select name="hospital_visits" id="hospital-visits">
+                <select name="hospital-visits" id="hospital-visits">
                     <option value="once_months" id="">Once a month</option>
                     <option value="once_2_months" id="">Once every 2 months</option>
                     <option value="once_4_months" id="">Once every 4 months</option>
@@ -60,14 +76,14 @@
             </tr>
             <tr>
                 <label for="hereditary-diseases">Do you have any hereditary conditions/diseases? e.g. high blood pressure, diabetes etc.</label>
-                <select name="hereditary_diseases" id="hereditary-diseases">
+                <select name="hereditary-diseases" id="hereditary-diseases">
                     <option value="">Yes</option>
                     <option value="">No</option>
                 </select>
             </tr>
             <tr>
                 <label for="hospital_check-ups">How often do you have doctor check-ups?</label>
-                <select name="hospital_checkUps" id="hospital_check-ups">
+                <select name="hospital_check-ups" id="hospital_check-ups">
                     <option value="">Once a month</option>
                     <option value="">Once every 2 months</option>
                     <option value="">Once every 4 months</option>
@@ -75,16 +91,19 @@
                 </select>
             </tr>
             <tr>
-                <label for="check-ups">What causes you not to go for your checkup?</label>
-                <select name="check-ups" id="check-ups">
-                    <option value="transportation">Transportation</option>
-                    <option value="financial_constraints">Financial constraints</option>
-                    <option value="denial_diagnosis">Denial of diagnosis</option>
-                </select>
+                <td>
+                    <label for="check-ups">What causes you not to go for your checkup?</label>
+                    <select name="check-ups" id="check-ups">
+                        <option value="transportation">Transportation</option>
+                        <option value="financial_constraints">Financial constraints</option>
+                        <option value="denial_diagnosis">Denial of diagnosis</option>
+                        <option value="other">Other</option>
+                    </select>
+                </td>
             </tr>
             <tr>
                 <label for="check-ups">How often do you have doctor check-ups?</label>
-                <select name="causes" id="check-ups">
+                <select name="check-ups" id="check-ups">
                     <option value="">Once a month</option>
                     <option value="">Once every 2 months</option>
                     <option value="">Once every 4 months</option>
@@ -93,7 +112,7 @@
             </tr>
             <tr>
                 <label for="medicines">How often do you have trouble taking medicines the way you have been told to take them?</label>
-                <select name="treatment" id="medicines">
+                <select name="medicines" id="medicines">
                     <option value="never">Never</option>
                     <option value="rarely">Rarely</option>
                     <option value="sometimes">Sometimes</option>
@@ -102,52 +121,62 @@
                 </select>
             </tr>
             <tr>
-                <label for="obtain_medication">Do you find it difficult to obtain your medication from the clinic or pharmacy?</label>
-                <select name="obtain_medication" id="medicines">
-                    <option value="never">Never</option>
-                    <option value="rarely">Rarely</option>
-                    <option value="sometimes">Sometimes</option>
-                    <option value="often">Often</option>
-                    <option value="always">Always</option>
-                </select>
+                <td>
+                    <label for="obtain_medication">Do you find it difficult to obtain your medication from the clinic or pharmacy?</label>
+                    <select name="obtain_medication" id="medicines">
+                        <option value="never">Never</option>
+                        <option value="rarely">Rarely</option>
+                        <option value="sometimes">Sometimes</option>
+                        <option value="often">Often</option>
+                        <option value="always">Always</option>
+                    </select>
+                </td>
             </tr>
             <tr>
-                <label for="medication">Are you getting the correct medication for your condition?</label>
-                <select name="medication" id="medication">
-                    <option value="yes">Yes</option>
-                    <option value="no">No</option>
-                    <option value="not_sure">I'm not sure</option>
-                </select>
+                <td>
+                    <label for="medication">Are you getting the correct medication for your condition?</label>
+                    <select name="medication" id="medication">
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
+                        <option value="not_sure">I'm not sure</option>
+                    </select>
+                </td>
             </tr>
             <tr>
                 <label for="medication">Do you have easy access to healthcare facilities?</label>
-                <select name="facilities" id="medication">
+                <select name="medication" id="medication">
                     <option value="yes">Yes</option>
                     <option value="no">No</option>
                 </select>
             </tr>
             <tr>
                 <label for="long_waiting">Have you experienced long waiting times at the clinic or pharmacy?</label>
-                <select name="queues" id="long_waiting">
+                <select name="long_waiting" id="long_waiting">
                     <option value="yes">Yes</option>
                     <option value="no">No</option>
                 </select>
             </tr>
             <tr>
-                <label for="defaulted_medication">Have you ever defaulted from taking your medication?</label>
-                <select name="defaulted_medication" id="defaulted_medication" onchange="showNextQuestion()">
-                    <option value="yes">Yes</option>
-                    <option value="no">No</option>
-                </select>
+                <td>
+                    <label for="defaulted_medication">Have you ever defaulted from taking your medication?</label>
+                    <select name="defaulted_medication" id="defaulted_medication" onchange="showNextQuestion()">
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
+                    </select>
+                </td>
             </tr>
             <tr id="next_question" style="display: none;">
-                <label for="defaulted_reason">What is the reason?</label>
-                <select name="defaulted_reason" id="defaulted_reason">
-                    <option value="Forgetfulness">Forgetfulness</option>
-                    <option value="side_effects">Side effects</option>
-                    <option value="cost">Cost</option>
-                    <option value="other">Other</option>
-                </select>
+                <td>
+                    <label for="defaulted_reason">What is the reason?</label>
+                    <select name="defaulted_reason" id="defaulted_reason">
+                        <option value="Forgetfulness">Forgetfulness</option>
+                        <option value="side_effects">Side effects</option>
+                        <option value="cost">Cost</option>
+                        <option value="awareness">lack of awareness</option>
+                        <option value="stigma">Stigma</option>
+                        <option value="other">Other</option>
+                    </select>
+                </td>
             </tr>
             <tr>
                 <td><button type="submit" value="Submit" name = "submit"class="survey_btn">Submit</button></td>
@@ -156,6 +185,33 @@
     </form>
 </div>
     <script>
+        function showChronicDiseaseOptions() {
+        var selectBox = document.getElementById("chronic-diseases");
+        var selectedValue = selectBox.options[selectBox.selectedIndex].value;
+        var chronicDiseaseOptions = document.getElementById("chronic-disease-options");
+        var chronicDiseaseList = document.getElementById("chronic-disease-list");
+        var otherChronicDiseaseInput = document.getElementById("other-chronic-disease");
+
+        if (selectedValue === "yes") {
+            chronicDiseaseOptions.style.display = "table-row";
+            chronicDiseaseList.style.display = "inline";
+            otherChronicDiseaseInput.style.display = "none";
+        } else {
+            chronicDiseaseOptions.style.display = "none";
+        }
+    }
+
+        document.getElementById("chronic-disease-list").addEventListener("change", function() {
+            var selectBox = document.getElementById("chronic-disease-list");
+            var selectedValue = selectBox.options[selectBox.selectedIndex].value;
+            var otherChronicDiseaseInput = document.getElementById("other-chronic-disease");
+
+            if (selectedValue === "other") {
+                otherChronicDiseaseInput.style.display = "inline";
+            } else {
+                otherChronicDiseaseInput.style.display = "none";
+            }
+        });
         function showNextQuestion() {
             var selectBox = document.getElementById("defaulted_medication");
             var selectedValue = selectBox.options[selectBox.selectedIndex].value;
