@@ -45,16 +45,17 @@
             <tr>
                 <td>
                     <label for="chronic-diseases">Do you have any chronic diseases?</label>
+                    </br>
                     <select name="illness" id="chronic-diseases" onchange="showChronicDiseaseOptions()">
                         <option value="yes">Yes</option>
                         <option value="no">No</option>
-                    add options for chronic diseases
                     </select>
-                </td>
+                </td> 
             </tr>
             <tr id="chronic-disease-options" style="display: none;">
             <td>
                 <label for="chronic-disease-list">Select chronic diseases:</label>
+                </br>
                 <select name="chronic_disease_list" id="chronic-disease-list">
                     <option value="cancer">Cancer</option>
                     <option value="asthma">Asthma</option>
@@ -62,12 +63,14 @@
                     <option value="arthritis">Arthritis</option>
                     <option value="other">Other</option>
                 </select>
+                </br>
                 <input type="text" name="other-chronic-disease" id="other-chronic-disease" placeholder="Enter other chronic disease" style="display: none;">
             </td>
         </tr>
             <tr>
                 <td>
                     <label for="hospital-visits">How often do you go to the hospital?</label>
+                    </br>
                     <select name="hospital_visits" id="hospital-visits">
                         <option value="once_months" id="">Once a month</option>
                         <option value="once_2_months" id="">Once every 2 months</option>
@@ -79,6 +82,7 @@
             <tr>
                 <td>
                     <label for="hospital_check-ups">How often do you have doctor check-ups?</label>
+                    </br>
                     <select name="hospital_checkUps" id="hospital_check-ups">
                         <option value="">Once a month</option>
                         <option value="">Once every 2 months</option>
@@ -90,6 +94,7 @@
             <tr>
                 <td>
                     <label for="check-ups">What causes you not to go for your checkup?</label>
+                    </br>
                     <select name="causes" id="check-ups">
                         <option value="transportation">Transportation</option>
                         <option value="financial_constraints">Financial constraints</option>
@@ -101,6 +106,7 @@
             <tr>
                 <td>
                     <label for="check-ups">How often do you have doctor check-ups?</label>
+                    </br>
                     <select name="check_ups" id="check-ups">
                         <option value="">Once a month</option>
                         <option value="">Once every 2 months</option>
@@ -112,6 +118,7 @@
             <tr>
                 <td>
                     <label for="medicines">How often do you have trouble taking medicines the way you have been told to take them?</label>
+                    </br>
                     <select name="treatment" id="medicines">
                         <option value="never">Never</option>
                         <option value="rarely">Rarely</option>
@@ -124,6 +131,7 @@
             <tr>
                 <td>
                     <label for="obtain_medication">Do you find it difficult to obtain your medication from the clinic or pharmacy?</label>
+                    </br>
                     <select name="obtain_medication" id="medicines">
                         <option value="never">Never</option>
                         <option value="rarely">Rarely</option>
@@ -136,6 +144,7 @@
             <tr>
                 <td>
                     <label for="medication">Are you getting the correct medication for your condition?</label>
+                    </br>
                     <select name="medication" id="medication">
                         <option value="yes">Yes</option>
                         <option value="no">No</option>
@@ -146,6 +155,7 @@
             <tr>
                 <td>
                     <label for="medication">Do you have easy access to healthcare facilities?</label>
+                    </br>
                     <select name="facilities" id="medication">
                         <option value="yes">Yes</option>
                         <option value="no">No</option>
@@ -155,6 +165,7 @@
             <tr>
                 <td>
                     <label for="long_waiting">Have you experienced long waiting times at the clinic or pharmacy?</label>
+                    </br>
                     <select name="queues" id="long_waiting">
                         <option value="yes">Yes</option>
                         <option value="no">No</option>
@@ -164,6 +175,7 @@
             <tr>
                 <td>
                     <label for="defaulted_medication">Have you ever defaulted from taking your medication?</label>
+                    </br>
                     <select name="defaulted_medication" id="defaulted_medication" onchange="showNextQuestion()">
                         <option value="yes">Yes</option>
                         <option value="no">No</option>
@@ -173,6 +185,7 @@
             <tr id="next_question" style="display: none;">
                 <td>
                     <label for="defaulted_reason">What is the reason?</label>
+                    </br>
                     <select name="defaulted_reason" id="defaulted_reason">
                         <option value="Forgetfulness">Forgetfulness</option>
                         <option value="side_effects">Side effects</option>
