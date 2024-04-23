@@ -15,7 +15,7 @@
       <div class="banner__container">
         <h1 class="banner__title">Medicentre</h1>
         <p class="banner__text">A better way to practice care</p>
-        <a href="Register.php" class="btn btn--opacity">Login</a>
+        <a href="index.php" class="btn btn--opacity">Login</a>
       </div>
      
     </div>

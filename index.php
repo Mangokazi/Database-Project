@@ -10,7 +10,7 @@
     <body>
         
         <div id="form1">
-            <h1>Login Form</h1>
+            <h1>Login Details</h1>
             <form name="form"  method="POST" action="Patient-table.php">
                
                 <input type="text" id="user" name="username" placeholder = "username"></br></br>
