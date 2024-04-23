@@ -67,7 +67,7 @@
    </div>
    <script>
     document.getElementById("add-patient-btn").addEventListener("click", function() {
-        window.location.href="Patient.html";
+        window.location.href="Patient.php";
     })
    </script> 
 </body>
