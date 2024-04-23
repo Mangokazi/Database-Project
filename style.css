@@ -1,7 +1,7 @@
 @import url(https://fonts.googleapis.com/css?family=Raleway:400,700);
 html, body { height: 100%; margin: 0; }
 body {
-  font-family:  sans-serif;  
+  font-family:  'Oswald', sans-serif;  
   background-image:url(Images/mybackground2.jpg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -30,7 +30,7 @@ h2 {
 }
 
 form {
-  margin: 35px 0;
+  margin: 40px 0;
 }
 
 #inputs {
@@ -60,7 +60,7 @@ input {
   border: 0;
   box-sizing: border-box;
   display: block;
-  font-family: Raleway, sans-serif;
+  font-family: 'Oswald', sans-serif;
   font-weight: 600;
   font-size: 12px;
   margin: 0 auto;
@@ -132,7 +132,7 @@ label {
 .banner {
   background-color: #333; /* Background color for the banner */
   color: white; /* Text color for banner content */
-  padding: 25px 0; /* Add padding to the banner */
+  padding: 30px 0; /* Add padding to the banner */
 }
 
 /* Styles for container inside the banner */
