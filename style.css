@@ -70,20 +70,19 @@ input {
   width: 350px;
   transform-origin: 0 0;
   -webkit-font-smoothing: antialiased;
-  
-  &:hover {
-    background: #f3f3f3;
-  }
-  &:focus {
-    background: #EAEAEA;
-  }
-  
-  &[type=submit] {
-    background: #43434C;
-    color: #FFFEFC;
-    cursor: pointer;
-  }
  
+}
+&:hover {
+  background: #f3f3f3;
+}
+&:focus {
+  background: #EAEAEA;
+}
+
+&[type=submit] {
+  background: #43434C;
+  color: #FFFEFC;
+  cursor: pointer;
 }
 
 input:checked {
