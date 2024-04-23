@@ -44,14 +44,14 @@
         <table class="survey_table">
             <tr>
                 <label for="chronic-diseases">Do you have any chronic diseases?</label>
-                <select name="chronic-diseases" id="chronic-diseases">
+                <select name="illness" id="chronic-diseases">
                     <option value="yes" id="">Yes</option>
                     <option value="no" id="">No</option>
                 </select>
             </tr>
             <tr>
                 <label for="hospital-visits">How often do you go to the hospital?</label>
-                <select name="hospital-visits" id="hospital-visits">
+                <select name="hospital_visits" id="hospital-visits">
                     <option value="once_months" id="">Once a month</option>
                     <option value="once_2_months" id="">Once every 2 months</option>
                     <option value="once_4_months" id="">Once every 4 months</option>
@@ -60,14 +60,14 @@
             </tr>
             <tr>
                 <label for="hereditary-diseases">Do you have any hereditary conditions/diseases? e.g. high blood pressure, diabetes etc.</label>
-                <select name="hereditary-diseases" id="hereditary-diseases">
+                <select name="hereditary_diseases" id="hereditary-diseases">
                     <option value="">Yes</option>
                     <option value="">No</option>
                 </select>
             </tr>
             <tr>
                 <label for="hospital_check-ups">How often do you have doctor check-ups?</label>
-                <select name="hospital_check-ups" id="hospital_check-ups">
+                <select name="hospital_checkUps" id="hospital_check-ups">
                     <option value="">Once a month</option>
                     <option value="">Once every 2 months</option>
                     <option value="">Once every 4 months</option>
@@ -84,7 +84,7 @@
             </tr>
             <tr>
                 <label for="check-ups">How often do you have doctor check-ups?</label>
-                <select name="check-ups" id="check-ups">
+                <select name="causes" id="check-ups">
                     <option value="">Once a month</option>
                     <option value="">Once every 2 months</option>
                     <option value="">Once every 4 months</option>
@@ -93,7 +93,7 @@
             </tr>
             <tr>
                 <label for="medicines">How often do you have trouble taking medicines the way you have been told to take them?</label>
-                <select name="medicines" id="medicines">
+                <select name="treatment" id="medicines">
                     <option value="never">Never</option>
                     <option value="rarely">Rarely</option>
                     <option value="sometimes">Sometimes</option>
@@ -121,14 +121,14 @@
             </tr>
             <tr>
                 <label for="medication">Do you have easy access to healthcare facilities?</label>
-                <select name="medication" id="medication">
+                <select name="facilities" id="medication">
                     <option value="yes">Yes</option>
                     <option value="no">No</option>
                 </select>
             </tr>
             <tr>
                 <label for="long_waiting">Have you experienced long waiting times at the clinic or pharmacy?</label>
-                <select name="long_waiting" id="long_waiting">
+                <select name="queues" id="long_waiting">
                     <option value="yes">Yes</option>
                     <option value="no">No</option>
                 </select>
