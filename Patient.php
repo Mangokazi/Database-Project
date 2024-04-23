@@ -39,6 +39,7 @@
         </div>
         <div class="form">
             <form id="add-patient-form" method="post">
+                <h2>Add Patient</h2>
                 <table>
                     <tr>
                         <td><label for="name">Name:</label></td>
