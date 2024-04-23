@@ -9,7 +9,37 @@
 </head>
 
 <body>
-    <form action="/submit_survey" method="post" id="survey_form">
+    <div class="header">
+        <div class="side-nav">
+            <div class="user">
+                <img src="Images/user.png" class="user-img">
+                <div>
+                    <h2>Ardaciti</h2>
+                    <p>ardacitim@xyz.com</p>
+                </div>
+                <img src="Images/star.png" class="star-img">
+            </div>
+            <ul>
+                <li><img src="Images/dashboard.png" alt="">
+                    <p>Dashboard</p>
+                </li>
+                <li><img src="Images/members.png" alt="">
+                    <p>Patients</p>
+                </li>
+                <li><img src="Images/reports.png" alt="">
+                    <p>Reports</p>
+                </li>
+                <li><img src="Images/setting.png" alt="">
+                    <p>Settings</p>
+                </li>
+            </ul>
+            <ul>
+                <li><img src="Images/logout.png" alt="">
+                    <p>Logout</p>
+                </li>
+            </ul>
+        </div>
+        <form action="/submit_survey" method="post" id="survey_form">
         <h2>Medical Survey</h2>
         <table>
             <tr>
@@ -102,6 +132,7 @@
             </tr>
         </table>
     </form>
+</div>
     <script>
         function showNextQuestion() {
             var selectBox = document.getElementById("defaulted_medication");

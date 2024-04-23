@@ -385,14 +385,14 @@ ul li p {
   padding-right: 10px;
 }
 
+/** survey form **/
+
 #survey_form {
   max-width: 1000px;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 10px;
-  padding-right: 10px;
-  padding-top: 20px;
-  margin-top: 30px;
+  margin: auto auto; /* Center the form horizontally and add top margin */
+  padding: 20px 10px; /* Adjust padding as needed */
+  
+  
 }
 
 .survey_btn {
