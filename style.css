@@ -70,20 +70,19 @@ input {
   width: 350px;
   transform-origin: 0 0;
   -webkit-font-smoothing: antialiased;
-  
-  &:hover {
-    background: #f3f3f3;
-  }
-  &:focus {
-    background: #EAEAEA;
-  }
-  
-  &[type=submit] {
-    background: #43434C;
-    color: #FFFEFC;
-    cursor: pointer;
-  }
  
+}
+&:hover {
+  background: #f3f3f3;
+}
+&:focus {
+  background: #EAEAEA;
+}
+
+&[type=submit] {
+  background: #43434C;
+  color: #FFFEFC;
+  cursor: pointer;
 }
 
 input:checked {
@@ -423,5 +422,25 @@ input {
     
 }
 
-
-
+#btn{
+  color:rgb(255, 255, 255);
+  background-color: rgb(108, 22, 189);
+  padding:10px;
+  font-size: large;
+  border-radius: 10px;
+}
+#form1{
+  background-color: rgb(255, 255, 255);
+  width:25%;
+  border-radius: 4px;
+  margin:120px auto;
+  padding:50px;
+  box-shadow: 10px 10px 5px rgb(82, 11, 77);
+}
+@media screen and (max-width: 570px) {
+  #form1 {
+    width: 65%;
+    margin-left:none;
+    padding:40px;
+  }
+}
