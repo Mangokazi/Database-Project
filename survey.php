@@ -41,14 +41,12 @@
         </div>
         <form action="/submit_survey" method="post" id="survey_form">
         <h2>Medical Survey</h2>
-        <table>
+        <table class="survey_table">
             <tr>
                 <label for="chronic-diseases">Do you have any chronic diseases?</label>
                 <select name="chronic-diseases" id="chronic-diseases">
-                    <option value="" id="">Once a month</option>
-                    <option value="" id="">Once every 2 months</option>
-                    <option value="" id="">Once every 4 months</option>
-                    <option value="" id="">Every 6 months</option>
+                    <option value="yes" id="">Yes</option>
+                    <option value="no" id="">No</option>
                 </select>
             </tr>
             <tr>
@@ -104,11 +102,35 @@
                 </select>
             </tr>
             <tr>
+                <label for="obtain_medication">Do you find it difficult to obtain your medication from the clinic or pharmacy?</label>
+                <select name="obtain_medication" id="medicines">
+                    <option value="never">Never</option>
+                    <option value="rarely">Rarely</option>
+                    <option value="sometimes">Sometimes</option>
+                    <option value="often">Often</option>
+                    <option value="always">Always</option>
+                </select>
+            </tr>
+            <tr>
                 <label for="medication">Are you getting the correct medication for your condition?</label>
                 <select name="medication" id="medication">
                     <option value="yes">Yes</option>
                     <option value="no">No</option>
                     <option value="not_sure">I'm not sure</option>
+                </select>
+            </tr>
+            <tr>
+                <label for="medication">Do you have easy access to healthcare facilities?</label>
+                <select name="medication" id="medication">
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+            </tr>
+            <tr>
+                <label for="long_waiting">Have you experienced long waiting times at the clinic or pharmacy?</label>
+                <select name="long_waiting" id="long_waiting">
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
                 </select>
             </tr>
             <tr>

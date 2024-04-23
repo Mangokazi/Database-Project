@@ -51,7 +51,7 @@
                     </tr>
                     <tr>
                         <td><label for="phone-number">Phone number:</label></td>
-                        <td><input type="number" id="phone-number" name="number" placeholder="051 415 2451" required></td>
+                        <td><input type="number" id="phone-number" name="number" placeholder="071 415 2451" required></td>
                     </tr>
                     <tr>
                         <td><label for="email">Email:</label></td>
@@ -66,7 +66,6 @@
                         <td>
                             <input type="radio" id="male" name="gender" value="male" class="gender" required> Male</td>
                            <td> <input type="radio" id="female" name="gender" value="female" required class="gender"> Female
-                            
                         </td>
                     </tr>
                     <tr>
