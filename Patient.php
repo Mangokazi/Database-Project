@@ -13,7 +13,7 @@
                 <img src="Images/user.png" class="user-img">
                 <div>
                     <h2>Ardaciti</h2>
-                    <p>davidm@xyz.com</p>
+                    <p>ardacitim@xyz.com</p>
                 </div>
                 <img src="Images/star.png" class="star-img">
             </div>
@@ -38,7 +38,7 @@
             </ul>
         </div>
         <div class="form">
-            <form id="add-patient-form" method= 'post'>
+            <form id="add-patient-form" method="post">
                 <table>
                     <tr>
                         <td><label for="name">Name:</label></td>
@@ -74,7 +74,7 @@
                     </tr>
                     <tr>
                         <td><label for="address">Address:</label></td>
-                        <td><textarea id="address" name="address" required ></textarea></td>
+                        <td><textarea id="address" name="address" type="text" required></textarea></td>
                     </tr>
                     <tr>
                         <td></td>
