@@ -209,9 +209,11 @@
                     </select>
                 </td>
             </tr>
-            <tr>
-                <td><button type="submit" value="Submit" class="survey_btn">Submit</button></td>
             </tr>
+            
+            <tr>
+                <td><button type="submit" value="Submit" name="save" class="survey_btn">Submit</button></td>
+</tr>
         </table>
     </form>
 </div>
@@ -256,7 +258,7 @@
         }
     </script>
 </body>
-
+</html>
 <?php
 
 
@@ -265,7 +267,7 @@ require_once'connection.php';
 
 
 
-$illness = $hospital_visits = $hospital_checkups= $causes =  $treatment = $obtain_medication= $medication=$facilities= $queues= $defaulted_medication=$defaulted_reasons=" ";
+$illness = $hospital_visits = $hospital_checkups= $causes = $check_ups= $treatment = $obtain_medication= $medication=$facilities= $queues= $defaulted_medication=$defaulted_reasons=" ";
 
 
 
@@ -280,6 +282,7 @@ if(isset($_POST['illness']))
 	$hospital_checkups= $_POST['hospital_checkups'];
 
 	$causes= $_POST['causes'];
+    $check_ups= $_POST['check_ups'];   
     $treatment = $_POST['treatment'];
 
 	$obtain_medication= $_POST['obtain_medication'];
@@ -292,7 +295,7 @@ if(isset($_POST['illness']))
 	$defaulted_medication= $_POST['defaulted_medication'];
 
 	$defaulted_reasons= $_POST['defaulted_reasons'];
-
+   
 
 
 
@@ -300,13 +303,13 @@ if(isset($_POST['illness']))
 
 
 
-if(isset($_POST['submit']))
+if(isset($_POST['save']))
 
 {
 
 
 
-$query = "INSERT INTO survey(illness,hospital_visits,hospital_checkups,causes,treatment,obtain_medication,medication,facilities,queuesdefaulted_medication,defaulted_reasons)VALUES('$illness','$hospital_visits',' $hospital_checkups','$causes',' $treatment',' $obtain_medication','$medication','$facilities'' $queues','$defaulted_medication','$defaulted_reasons',)";
+$query = "INSERT INTO survey(illness,hospital_visits,hospital_checkups,causes,check_ups,treatment,obtain_medication,medication,facilities,queuesdefaulted_medication,defaulted_reasons)VALUES('$illness','$hospital_visits',' $hospital_checkups','$causes','$check_ups',' $treatment',' $obtain_medication','$medication','$facilities'' $queues','$defaulted_medication','$defaulted_reasons')";
 
 
 
@@ -317,7 +320,7 @@ $result = $con->query($query);
 if(!$result)
 
 {die($con->error);
-
+    echo"alert('There was an issue uploading your details,please try again or contact an administrator')";
 
 }
 
