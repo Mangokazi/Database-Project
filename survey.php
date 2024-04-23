@@ -150,7 +150,7 @@
                 </select>
             </tr>
             <tr>
-                <td><button type="submit" value="Submit" class="survey_btn">Submit</button></td>
+                <td><button type="submit" value="Submit" name = "submit"class="survey_btn">Submit</button></td>
             </tr>
         </table>
     </form>
@@ -171,3 +171,73 @@
 </body>
 
 </html>
+<?php
+
+
+
+require_once'connection.php';
+
+
+
+$illness = $hospital_visits = $hospital_checkups= $causes =  $treatment = $obtain_medication= $medication=$facilities= $queues= $defaulted_medication=$defaulted_reasons=" ";
+
+
+
+if(isset($_POST['illness']))
+
+{
+
+    $illness = $_POST['illness'];
+
+	$hospital_visits= $_POST['hospital_visits'];
+
+	$hospital_checkups= $_POST['hospital_checkups'];
+
+	$causes= $_POST['email'];
+    $treatment = $_POST['treatment'];
+
+	$gender = $_POST['gender'];
+
+	$diagnosis= $_POST['diagnosis'];
+
+	$address= $_POST['address'];
+
+
+
+}
+
+
+
+if(isset($_POST['submit']))
+
+{
+
+
+
+$query = "INSERT INTO survey(name,hospital_visits,hospital_checkups,causes,treatment,gender,diagnosis,address)VALUES('$name','$hospital_visits',' $hospital_checkups','$causes',' $treatment',' $gender','$diagnosis','$address')";
+
+
+
+$result = $con->query($query);
+
+
+
+if(!$result)
+
+{die($con->error);
+
+
+}
+
+else
+
+{
+
+
+
+echo"alert('Information successfully submitted!')";
+
+}
+
+}
+
