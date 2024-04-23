@@ -1,379 +1,60 @@
-@import url(https://fonts.googleapis.com/css?family=Raleway:400,700);
-html, body { height: 100%; margin: 0; }
-body {
-  font-family:  sans-serif;  
-  background-image:url(Images/mybackground2.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  -webkit-font-smoothing: antialiased;
-}
-
-:focus { outline: 0; }
-
-#wrapper {
-  perspective: 500px;
-  position: absolute;
-  top: 60%;
-  left: 50%;
-  text-align: center;
-  transform: translate3d(-50%,-50%,0);
-}
-
-h1 {
-  color: #416171;
-  font-size: 43px;
-  margin: 0;
-}
-h2 {
-  color: #349E97;
-  margin: 0;
-}
-
-form {
-  margin: 35px 0;
-}
-
-#inputs {
-  height: 127px;
-  transition: height .5s ease-in-out;
-  div {
-    height: 41px;
-    transform-origin: 0 0;
-    transition: transform .5s ease-in-out;
-  }
-  > div > div > div {
-    transform: rotateX(0deg);
-    transform-style: preserve-3d;
-  }
-  > div > div > div input:nth-child(2),
-  > div > div > div > div input:nth-child(2) {
-    transform: translateZ(-1px) rotateX(180deg);
-  }
-  > div > div > div > div {
-    transform: translateY(-41px) rotateX(0deg);
-    transform-style: preserve-3d;
-  }
-}
-
-input {
-  background: #FFFEFC;
-  border: 0;
-  box-sizing: border-box;
-  display: block;
-  font-family: Raleway, sans-serif;
-  font-weight: 600;
-  font-size: 12px;
-  margin: 5px auto;
-  padding: 13px;
-  text-transform: uppercase;
-  transition: all .2s ease-in-out;
-  width: 350px;
-  transform-origin: 0 0;
-  -webkit-font-smoothing: antialiased;
- 
-}
-&:hover {
-  background: #f3f3f3;
-}
-&:focus {
-  background: #EAEAEA;
-}
-
-&[type=submit] {
-  background: #43434C;
-  color: #FFFEFC;
-  cursor: pointer;
-}
-
-input:checked {
-  &[value=reset] {
-    ~ #inputs { height: 84px; }
-    ~ #labels { margin-top: -10px; }
-    ~ #inputs div > div > div { transform: rotateX(180deg); }
-    ~ #inputs div > div > div > div { transform: translateY(-41px) rotateX(180deg); }
-    ~ #labels label[for=reset],
-    ~ #labels label[for=register],
-    ~ #labels label[for=login]:first-child { transition: opacity .5s; opacity: 0; }
-  }
-  &[value=register] {
-    ~ #inputs { height: 170px; }
-    ~ #labels { margin-top: 30px; }
-    ~ #labels label[for=reset],
-    ~ #labels label[for=register],
-    ~ #labels label[for=login]:nth-child(3) { transition: opacity .5s; opacity: 0; }
-  }
-  &[value=login] {
-    ~ #labels { margin-top: 11px; }
-    ~ #inputs div > div > div > div { transform: translateY(-41px) rotateX(180deg); }
-    ~ #labels label[for=login] { transition: opacity .5s; opacity: 0; }
-  }
-}
-
-
-#labels {
-  transition: margin .5s ease-in-out;
-}
-label {
-  display: block;
-  font-size: 14px;
-  color: #43434C;
-  margin-bottom: 5px;
-  font-weight: 600;
-  height: 16px;
-  transition: opacity 1s .3s;
-  overflow: hidden;
-  span {
-    cursor: pointer;
-    color: #34809e;
-  }
-}
-/* Basic styles for banner */
-.banner {
-  background-color: #333; /* Background color for the banner */
-  color: white; /* Text color for banner content */
-  padding: 25px 0; /* Add padding to the banner */
-}
-
-/* Styles for container inside the banner */
-.banner .container {
-  width: 80%; /* Set container width */
-  margin: 0 auto; /* Center the container */
-  display: flex;
-  justify-content: space-between; /* Space elements evenly */
-  align-items: center; /* Center items vertically */
-}
-
-/* Styles for logo */
-.logo img {
-  width: 100px; /* Adjust logo width */
-}
-
-/* Styles for navigation links */
-.banner nav ul {
-  list-style-type: none; /* Remove default list styling */
+body, html {
   margin: 0;
   padding: 0;
-}
-
-.banner nav ul li {
-  display: inline; /* Display list items horizontally */
-}
-
-.banner nav ul li a {
-  color: white; /* Text color for navigation links */
-  text-decoration: none; /* Remove underline from links */
-  margin-left: 20px; /* Add spacing between links */
-}
-
-.banner nav ul li:first-child a {
-  margin-left: 0; /* Remove left margin from the first link */
-}
-
-.banner nav ul li a:hover {
-  text-decoration: underline; /* Add underline on hover */
-}
-
-/**Patient table css - side nav*/
-.header {
-  width:100%;
-  height: 100vh;
-  background-image: url(Images/mybackground2.jpg);
-  background-position: center;
-  background-size: cover;
-}
-
-.side-nav {
-  width: 110px;
   height: 100%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  padding: 30px 20px;
-  background: rgba(255, 255, 255, 0.2);
-  backdrop-filter: blur(5px);
+}
+
+.background-image {
+  background-image: url(Images/homepage_background.jpg);
+  background-size: cover;
+  background-position: center;
   display: flex;
-  justify-content: space-between;
-  flex-direction: column;
-  transition: width 0.5s;
-}
-
-.user {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 60px;
-  font-size: 12px;
-  padding: 10px;
-  border-radius: 8px;
-  margin-left: auto;
-  margin-right: auto;
-  overflow: hidden;
-}
-
-.user div {
-  display: none;
-}
-
-.user h2 {
-  font-size: 15px;
-  font-weight: 600;
-  white-space: nowrap;
-}
-
-.user-img {
-  width: 40px;
-  border-radius: 50%;
-  margin: auto;
-}
-
-.star-img {
-  width: 20px;
-  display: none;
-}
-
-ul {
-  list-style: none;
-  padding: 0 15px;
-}
-
-ul li {
-  margin: 30px 0;
-  display: flex;
-  align-items: center;
   justify-content: center;
-  cursor: pointer;
-}
-
-ul li img {
-  width: 30px;
-  margin-right: 0;
-
-}
-
-ul li p {
-  white-space: nowrap;
-  display: none;
-}
-
-.side-nav:hover {
-  width: 250px;
-
-}
-
-.side-nav:hover .user div {
-  display: block;
-}
-
-.side-nav:hover .user {
-  width: 100%;
-  background: rgba(255, 255, 255, 0.2);
-  backdrop-filter: blur(5px);
-}
-
-.side-nav:hover .star-img {
-  display: block;
-
-}
-
-.side-nav:hover .user-img {
-  margin: 0;
-}
-
-.side-nav:hover ul li p {
-  display: block;
-}
-
-.side-nav:hover ul li img{
-  margin-right: 10px;
-}
-
-.side-nav:hover ul li {
-  justify-content: flex-start;
-}
-
-.patients-btn {
-  width: 200px;
-  background-color: white;
-  color: black;
-  border: 2px solid #349E97;
-  position: absolute;
-  border-radius: 10px;
-  padding: 10px;
-  right: 30px;
-  top: 30px;
-  
-}
-
-.add-user-img {
-  width: 20px;
-  height: 20px;
-  margin-right: 5px;
+  align-items: center;
+  height: 100%;
 }
 
 .container {
-  max-width: 1000px;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 10px;
-  padding-right: 10px;
-  
+  background-color: rgba(255, 255, 255, 0.9); /* semi-transparent white */
+  border-radius: 10px;
+  padding: 30px;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
 }
 
-.responsive-table {
-    li {
-      border-radius: 3px;
-      padding: 25px 30px;
-      display: flex;
-      justify-content: space-between;
-      margin-bottom: 25px;
-      
-  }
-
-  .table-header {
-    font-size: 14px;
-    text-transform: uppercase;
-    letter-spacing: 0.03em;
-    background-color: #349E97;
-  }
-
-  .table-row {
-    box-shadow: 0px 0px 9px 0px rgba(0,0,0,0.4);
-    background: rgba(255, 255, 255, 0.2);
-    backdrop-filter: blur(5px);
-  }
-
-  .col-1 {
-    flex-basis: 30%;
-  }
-  .col-2 {
-    flex-basis: 30%;
-  }
-  .col-3 {
-    flex-basis: 30%;
-  }
-  .col-4 {
-    flex-basis: 30%;
-  }
-  .col-5 {
-    flex-basis: 30%;
-  }
-  .col-6 {
-    flex-basis: 50%;
-  }
-  .col-7 {
-    flex-basis: 30%;
-  }
-
+.login-form h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
 }
 
-/**patient form css */
-.form {
-  border-radius: 3px;
-  padding: 25px 30px;
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 25px;
-  right: 20px;
+.error-message {
+  color: #ff0000;
+  font-size: 14px;
+  text-align: center;
+  margin-bottom: 20px;
+  display: none;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-control {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.form-control:focus {
+  outline: none;
+  border-color: #007bff;
+}
+
+.form-group label {
+  color: #555;
+  font-weight: bold;
 }
 
 #add-patient-form {
@@ -384,63 +65,27 @@ ul li p {
   padding-right: 10px;
 }
 
-input {
-  background: #FFFEFC;
-  border: 0;
-  box-sizing: border-box;
-  display: block;
-  font-family: Raleway, sans-serif;
-  font-weight: 600;
-  font-size: 12px;
-  margin: 5px auto;
-  padding: 13px;
-  text-transform: uppercase;
-  transition: all .2s ease-in-out;
-  width: 350px;
-  transform-origin: 0 0;
-  -webkit-font-smoothing: antialiased;
-}
-
 /** survey form **/
 
 #survey_form {
   max-width: 1000px;
-  margin: auto auto; /* Center the form horizontally and add top margin */ 
-  padding: 40px;
-  margin-left: 500px;
+  margin: auto auto; /* Center the form horizontally and add top margin */
+  padding: 20px 10px; /* Adjust padding as needed */
+  
   
 }
 
-.survey_btn {
-  width: 200px;
-  background-color: white;
-  color: black;
-  border: 2px solid #349E97;
-  position: absolute;
-  border-radius: 10px;
+.btn-primary {
+  background-color: #007bff;
+  border-color: #007bff;
+  color: #fff;
+  width: 100%;
   padding: 10px;
-    
+  border-radius: 5px;
+  font-size: 16px;
 }
 
-#btn{
-  color:rgb(255, 255, 255);
-  background-color: rgb(108, 22, 189);
-  padding:10px;
-  font-size: large;
-  border-radius: 10px;
-}
-#form1{
-  background-color: rgb(255, 255, 255);
-  width:25%;
-  border-radius: 4px;
-  margin:120px auto;
-  padding:50px;
-  box-shadow: 10px 10px 5px rgb(82, 11, 77);
-}
-@media screen and (max-width: 570px) {
-  #form1 {
-    width: 65%;
-    margin-left:none;
-    padding:40px;
-  }
+.btn-primary:hover {
+  background-color: #0056b3;
+  border-color: #0056b3;
 }
