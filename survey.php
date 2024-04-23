@@ -43,111 +43,120 @@
         <h2>Medical Survey</h2>
         <table class="survey_table">
             <tr>
-                <label for="chronic-diseases">Do you have any chronic diseases?</label>
-                <select name="chronic-diseases" id="chronic-diseases">
-                    <option value="yes" id="">Yes</option>
-                    <option value="no" id="">No</option>
-                </select>
+                <td><label for="chronic-diseases">Do you have any chronic diseases?</label>
+                    <select name="chronic-diseases" id="chronic-diseases">
+                        <option value="yes" id="">Yes</option>
+                        <option value="no" id="">No</option>
+                    add options for chronic diseases
+                    </select>
+                </td>
             </tr>
             <tr>
-                <label for="hospital-visits">How often do you go to the hospital?</label>
-                <select name="hospital-visits" id="hospital-visits">
-                    <option value="once_months" id="">Once a month</option>
-                    <option value="once_2_months" id="">Once every 2 months</option>
-                    <option value="once_4_months" id="">Once every 4 months</option>
-                    <option value="every_6_months" id="">Every 6 months</option>
-                </select>
+                <td><label for="hospital-visits">How often do you go to the hospital?</label>
+                    <select name="hospital-visits" id="hospital-visits">
+                        <option value="once_months" id="">Once a month</option>
+                        <option value="once_2_months" id="">Once every 2 months</option>
+                        <option value="once_4_months" id="">Once every 4 months</option>
+                        <option value="every_6_months" id="">Every 6 months</option>
+                    </select>
+                </td>
             </tr>
             <tr>
-                <label for="hereditary-diseases">Do you have any hereditary conditions/diseases? e.g. high blood pressure, diabetes etc.</label>
-                <select name="hereditary-diseases" id="hereditary-diseases">
-                    <option value="">Yes</option>
-                    <option value="">No</option>
-                </select>
+                <td><label for="hospital_check-ups">How often do you have doctor check-ups?</label>
+                    <select name="hospital_check-ups" id="hospital_check-ups">
+                        <option value="">Once a month</option>
+                        <option value="">Once every 2 months</option>
+                        <option value="">Once every 4 months</option>
+                        <option value="">Every 6 months</option>
+                    </select>
+                </td>
             </tr>
             <tr>
-                <label for="hospital_check-ups">How often do you have doctor check-ups?</label>
-                <select name="hospital_check-ups" id="hospital_check-ups">
-                    <option value="">Once a month</option>
-                    <option value="">Once every 2 months</option>
-                    <option value="">Once every 4 months</option>
-                    <option value="">Every 6 months</option>
-                </select>
+                <td><label for="check-ups">What causes you not to go for your checkup?</label>
+                    <select name="check-ups" id="check-ups">
+                        <option value="transportation">Transportation</option>
+                        <option value="financial_constraints">Financial constraints</option>
+                        <option value="denial_diagnosis">Denial of diagnosis</option>
+                        <option value="other">Other</option>
+                    </select>
+                </td>
             </tr>
             <tr>
-                <label for="check-ups">What causes you not to go for your checkup?</label>
-                <select name="check-ups" id="check-ups">
-                    <option value="transportation">Transportation</option>
-                    <option value="financial_constraints">Financial constraints</option>
-                    <option value="denial_diagnosis">Denial of diagnosis</option>
-                </select>
+                <td><label for="check-ups">How often do you have doctor check-ups?</label>
+                    <select name="check-ups" id="check-ups">
+                        <option value="">Once a month</option>
+                        <option value="">Once every 2 months</option>
+                        <option value="">Once every 4 months</option>
+                        <option value="">Every 6 months</option>
+                    </select>
+                </td>
             </tr>
             <tr>
-                <label for="check-ups">How often do you have doctor check-ups?</label>
-                <select name="check-ups" id="check-ups">
-                    <option value="">Once a month</option>
-                    <option value="">Once every 2 months</option>
-                    <option value="">Once every 4 months</option>
-                    <option value="">Every 6 months</option>
-                </select>
+                <td><label for="medicines">How often do you have trouble taking medicines the way you have been told to take them?</label>
+                    <select name="medicines" id="medicines">
+                        <option value="never">Never</option>
+                        <option value="rarely">Rarely</option>
+                        <option value="sometimes">Sometimes</option>
+                        <option value="often">Often</option>
+                        <option value="always">Always</option>
+                    </select>
+                </td>
             </tr>
             <tr>
-                <label for="medicines">How often do you have trouble taking medicines the way you have been told to take them?</label>
-                <select name="medicines" id="medicines">
-                    <option value="never">Never</option>
-                    <option value="rarely">Rarely</option>
-                    <option value="sometimes">Sometimes</option>
-                    <option value="often">Often</option>
-                    <option value="always">Always</option>
-                </select>
+                <td><label for="obtain_medication">Do you find it difficult to obtain your medication from the clinic or pharmacy?</label>
+                    <select name="obtain_medication" id="medicines">
+                        <option value="never">Never</option>
+                        <option value="rarely">Rarely</option>
+                        <option value="sometimes">Sometimes</option>
+                        <option value="often">Often</option>
+                        <option value="always">Always</option>
+                    </select>
+                </td>
             </tr>
             <tr>
-                <label for="obtain_medication">Do you find it difficult to obtain your medication from the clinic or pharmacy?</label>
-                <select name="obtain_medication" id="medicines">
-                    <option value="never">Never</option>
-                    <option value="rarely">Rarely</option>
-                    <option value="sometimes">Sometimes</option>
-                    <option value="often">Often</option>
-                    <option value="always">Always</option>
-                </select>
+                <td><label for="medication">Are you getting the correct medication for your condition?</label>
+                    <select name="medication" id="medication">
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
+                        <option value="not_sure">I'm not sure</option>
+                    </select>
+                </td>
             </tr>
             <tr>
-                <label for="medication">Are you getting the correct medication for your condition?</label>
-                <select name="medication" id="medication">
-                    <option value="yes">Yes</option>
-                    <option value="no">No</option>
-                    <option value="not_sure">I'm not sure</option>
-                </select>
+                <td><label for="medication">Do you have easy access to healthcare facilities?</label>
+                    <select name="medication" id="medication">
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
+                    </select>
+                </td>
             </tr>
             <tr>
-                <label for="medication">Do you have easy access to healthcare facilities?</label>
-                <select name="medication" id="medication">
-                    <option value="yes">Yes</option>
-                    <option value="no">No</option>
-                </select>
+                <td><label for="long_waiting">Have you experienced long waiting times at the clinic or pharmacy?</label>
+                    <select name="long_waiting" id="long_waiting">
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
+                    </select>
+                </td>
             </tr>
             <tr>
-                <label for="long_waiting">Have you experienced long waiting times at the clinic or pharmacy?</label>
-                <select name="long_waiting" id="long_waiting">
-                    <option value="yes">Yes</option>
-                    <option value="no">No</option>
-                </select>
-            </tr>
-            <tr>
-                <label for="defaulted_medication">Have you ever defaulted from taking your medication?</label>
-                <select name="defaulted_medication" id="defaulted_medication" onchange="showNextQuestion()">
-                    <option value="yes">Yes</option>
-                    <option value="no">No</option>
-                </select>
+                <td><label for="defaulted_medication">Have you ever defaulted from taking your medication?</label>
+                    <select name="defaulted_medication" id="defaulted_medication" onchange="showNextQuestion()">
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
+                    </select>
+                </td>
             </tr>
             <tr id="next_question" style="display: none;">
-                <label for="defaulted_reason">What is the reason?</label>
-                <select name="defaulted_reason" id="defaulted_reason">
-                    <option value="Forgetfulness">Forgetfulness</option>
-                    <option value="side_effects">Side effects</option>
-                    <option value="cost">Cost</option>
-                    <option value="other">Other</option>
-                </select>
+                <td><label for="defaulted_reason">What is the reason?</label>
+                    <select name="defaulted_reason" id="defaulted_reason">
+                        <option value="Forgetfulness">Forgetfulness</option>
+                        <option value="side_effects">Side effects</option>
+                        <option value="cost">Cost</option>
+                        <option value="awareness">lack of awareness</option>
+                        <option value="stigma">Stigma</option>
+                        <option value="other">Other</option>
+                    </select>
+                </td>
             </tr>
             <tr>
                 <td><button type="submit" value="Submit" class="survey_btn">Submit</button></td>
