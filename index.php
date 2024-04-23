@@ -12,10 +12,10 @@
         <div id="form1">
             <h1>Login Form</h1>
             <form name="form"  method="POST" action="Patient-table.php">
-                <label>Username: </label>
-                <input type="text" id="user" name="username"></br></br>
-                <label>Password: </label>
-                <input type="password" id="pass" name="password"></br></br>
+               
+                <input type="text" id="user" name="username" placeholder = "username"></br></br>
+            
+                <input type="password" id="pass" name="password" placeholder="password"></br></br>
                 <input type="submit" id="btn" value="Login" name = "submit"/>
         
        
