@@ -38,7 +38,7 @@
             </ul>
         </div>
         <div class="form">
-            <form id="add-patient-form">
+            <form id="add-patient-form" method= 'post'>
                 <table>
                     <tr>
                         <td><label for="name">Name:</label></td>
@@ -50,7 +50,7 @@
                     </tr>
                     <tr>
                         <td><label for="phone-number">Phone number:</label></td>
-                        <td><input type="tel" id="phone-number" name="phone number" placeholder="051 415 2451" required></td>
+                        <td><input type="number" id="phone-number" name="number" placeholder="051 415 2451" required></td>
                     </tr>
                     <tr>
                         <td><label for="email">Email:</label></td>
@@ -78,12 +78,83 @@
                     </tr>
                     <tr>
                         <td></td>
-                        <td><button type="submit">Submit</button></td>
+                        <td><button type="submit" name = 'submit'>Submit</button></td>
                     </tr>
                 </table>
-            </form>
             
         </div>
     </div>
+    </form>
+            
 </body>
 </html>
+<?php
+
+
+
+require_once'connection.php';
+
+
+
+$name = $surname = $number= $email =  $dob = $gender= $diagnosis=$address=" ";
+
+
+
+if(isset($_POST['name']))
+
+{
+
+    $name = $_POST['name'];
+
+	$surname = $_POST['surname'];
+
+	$number= $_POST['number'];
+
+	$email= $_POST['email'];
+    $dob = $_POST['dob'];
+
+	$gender = $_POST['gender'];
+
+	$diagnosis= $_POST['diagnosis'];
+
+	$address= $_POST['address'];
+
+
+
+}
+
+
+
+if(isset($_POST['submit']))
+
+{
+
+
+
+$query = "INSERT INTO patient(name,surname,number,email,dob,gender,diagnosis,address)VALUES('$name','$surname',' $number','$email',' $dob',' $gender','$diagnosis','$address')";
+
+
+
+$result = $con->query($query);
+
+
+
+if(!$result)
+
+{die($con->error);
+
+
+}
+
+else
+
+{
+
+
+
+echo"alert('Information successfully submitted!')";
+
+}
+
+}
+

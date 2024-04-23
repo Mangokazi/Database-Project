@@ -33,9 +33,9 @@
       <div>
         <input type="email" name = "username" placeholder="email" autofocus>
         <div>
-          <input type="password" name = "user"placeholder="password">
+          <input type="password" name = "password"placeholder="password">
           <div>
-            <input type="password" name="user"placeholder="repeat password ">
+            <input type="password" name="password"placeholder="repeat password ">
             <input type="submit" value="reset password">
             <div>
               <input type="submit"name = "save" value="register">
@@ -69,7 +69,7 @@ require_once'connection.php';
 
 
 
- $username  = $user= " ";
+ $username  = $password= " ";
 
 
 
@@ -80,16 +80,12 @@ if(isset($_POST['username']))
     $username= $_POST['username'];
 
 
-	$paused = $_POST['user'];
+	$password = $_POST['password'];
 
 
 
 
 }
-
-
-
-
 
 
 if(isset($_POST['save']))
@@ -98,7 +94,7 @@ if(isset($_POST['save']))
 
 
 
-$query = "INSERT INTO logging(username,password)VALUES('$username','$user')";
+$query = "INSERT INTO logging(username,password)VALUES('$username','$password')";
 
 
 
