@@ -33,7 +33,7 @@
                     <span>Add Patient</span>
             </button>
         </div>
-        <div class="container">
+        <div class="patient_container">
             <ul class="responsive-table">
                 <li class="table-header">
                     <div class="col col-1">Name</div>
