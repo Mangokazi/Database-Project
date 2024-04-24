@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
+<body class="header">
     <div class="header">
         <div class="side-nav">
             <div class="user">
