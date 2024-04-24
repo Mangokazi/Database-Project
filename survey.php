@@ -110,7 +110,7 @@
             </tr>
             <tr>
                 <td>
-                    <label for="check-ups">How often do you have doctor check-ups?</label>
+                    <label for="check-ups">How often do you miss your health check-ups?</label>
                     </br>
                     <select name="check_ups" id="check-ups">
                         <option selected hidden value="">--Select--</option>
