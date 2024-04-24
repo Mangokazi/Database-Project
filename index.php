@@ -5,7 +5,7 @@
         <link rel="stylesheet" type="text/css" href="style.css">
         <!--<a href="index.php" class="btn btn--opacity">Login</a>-->
     </head>
-    <body>
+    <body class="header">
         <div id="form1">
             <h1>Login Details</h1>
             <form name="form"  method="POST" action="Patient-table.php">

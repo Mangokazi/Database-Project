@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" type="text/css" href="style.css">
     </head>
-    <body>
+    <body class="header">
         <div id="form1">
             <h1>Register</h1>
             <form name="form"  method="post" action= "index.php">
