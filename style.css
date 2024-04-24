@@ -76,13 +76,14 @@ a {
 .header {
   width:100%;
   height: 100vh;
-  background-image: url(Images/mybackground2.jpg);
+  background-image: url(Images/bg.png);
   background-position: center top;
   background-size: cover;
   background-repeat: no-repeat;
+  
 }
 body.header{
-  background-image: url(Images/mybackground2.jpg);
+  background-image: url(Images/bg.png);
 }
 .side-nav {
   width: 110px;
@@ -349,6 +350,7 @@ h3.logo {
   margin:120px auto;
   padding:50px;
   box-shadow: 10px 10px 5px rgb(82, 11, 77);
+  text-align: center;
 }
 @media screen and (max-width: 570px) {
   #form1 {
@@ -357,6 +359,16 @@ h3.logo {
     padding:40px;
   }
 }
+
+#labels {
+  margin-top: 20px;
+
+}
+
+.account {
+  margin-top: 10px;
+}
+
 
 /* login_page */
 
