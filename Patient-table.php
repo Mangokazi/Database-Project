@@ -1,3 +1,21 @@
+<?php
+require_once 'connection.php'; // Include your database connection file
+
+// Check if the connection is established
+if ($con->connect_error) {
+    die("Connection failed: " . $con->connect_error);
+}
+
+// Fetch data from the database
+$query = "SELECT * FROM patient";
+$result = $con->query($query);
+
+// Check if the query was successful
+if (!$result) {
+    die("Query failed: " . $con->error);
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,7 +24,7 @@
     <title>Home</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="header">
    <div class="header">
         <div class="side-nav">
             <div class="user">
@@ -38,35 +56,43 @@
             </button>
         </div>
         <div class="patient_container">
-            <ul class="responsive-table">
-                <li class="table-header">
-                    <div class="col col-1">Name</div>
-                    <div class="col col-2">Surname</div>
-                    <div class="col col-3">Age</div>
-                    <div class="col col-4">Gender</div>
-                    <div class="col col-5">Address</div>
-                    <div class="col col-6">Phone Number</div>
-                    <div class="col col-7">Diagnosis</div>
-                </li>
-                <li class="table-row">
-                    <div class="col col-1" data-label="Name">Larry</div>
-                    <div class="col col-2" data-label="Surname">Smith</div>
-                    <div class="col col-3" data-label="Age">40</div>
-                    <div class="col col-4" data-label="Gender">Male</div>
-                    <div class="col col-5" data-label="Address">19 Durham Avenue, Salt River</div>
-                    <div class="col col-6" data-label="Phone Number">+27 765 7992</div>
-                    <div class="col col-7" data-label="Diagnosis">Hypertension</div>
-                </li>
-                <li class="table-row">
-                    <div class="col col-1" data-label="Name">Maggy</div>
-                    <div class="col col-2" data-label="Surname">Steward</div>
-                    <div class="col col-3" data-label="Age">30</div>
-                    <div class="col col-4" data-label="Gender">Female</div>
-                    <div class="col col-5" data-label="Address">11 Salt River Rd, Salt River</div>
-                    <div class="col col-6" data-label="Phone Number">+27 725 7932</div>
-                    <div class="col col-7" data-label="Diagnosis">Heart Disease</div>
-                </li>
-            </ul>
+            <table class="responsive-table">
+                <thead>
+                    <tr class="table-header">
+                        <th class="col col-1">Name</th>
+                        <th class="col col-2">Surname</th>
+                        <th class="col col-3">Phone Number</th>
+                        <th class="col col-4">Email</th>
+                        <th class="col col-5">DOB</th>
+                        <th class="col col-6">Gender</th>
+                        <th class="col col-7">Diagnosis</th>
+                        <th class="col col-8">Address</th>
+                    </tr>
+                </thead>
+                <tbody>
+                <?php
+                // Check if there are any rows returned
+                if ($result->num_rows > 0) {
+                    // Loop through each row and display data
+                    while ($row = $result->fetch_assoc()) {
+                        echo "<tr class='table-row'>";
+                        echo "<td class='col col-1' data-label='Name'>" . $row['name'] . "</td>";
+                        echo "<td class='col col-2' data-label='Surname'>" . $row['surname'] . "</td>";
+                        echo "<td class='col col-3' data-label='Phone Number'>" . $row['number'] . "</td>";
+                        echo "<td class='col col-4' data-label='Email'>" . $row['email'] . "</td>";
+                        echo "<td class='col col-5' data-label='DOB'>" . $row['dob'] . "</td>";
+                        echo "<td class='col col-6' data-label='Gender'>" . $row['gender'] . "</td>";
+                        echo "<td class='col col-7' data-label='Diagnosis'>" . $row['diagnosis'] . "</td>";
+                        echo "<td class='col col-8' data-label='Address'>" . $row['address'] . "</td>";
+                        echo "</tr>";
+                    }
+                } else {
+                    echo "<tr><td colspan='8'>No data available</td></tr>";
+                }
+                ?>
+            </tbody>
+            
+            </table>
         </div>
    </div>
    <script>
@@ -76,3 +102,4 @@
    </script> 
 </body>
 </html>
+

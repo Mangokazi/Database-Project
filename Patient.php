@@ -39,7 +39,7 @@
         </div>
         <div class="form">
             <form id="add-patient-form" method="post">
-                <h2>Add Patient</h2>
+                <h3>Add Patient</h3>
                 <table>
                     <tr>
                         <td><label for="name">Name:</label></td>
@@ -90,8 +90,6 @@
 </body>
 </html>
 <?php
-
-
 
 require_once'connection.php';
 
