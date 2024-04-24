@@ -80,46 +80,45 @@ if (!$result) {
                         <th class="col col-8">Address</th>
                     </tr>
                 </thead>
-                <tbody>
-                <?php
-                // Check if there are any rows returned
-                if ($result->num_rows > 0) {
-                    // Loop through each row and display data
-                    while ($row = $result->fetch_assoc()) {
-                        echo "<tr class='table-row'>";
-                        echo "<td class='col col-1' data-label='Name'>" . $row['name'] . "</td>";
-                        echo "<td class='col col-2' data-label='Surname'>" . $row['surname'] . "</td>";
-                        echo "<td class='col col-3' data-label='Phone Number'>" . $row['number'] . "</td>";
-                        echo "<td class='col col-4' data-label='Email'>" . $row['email'] . "</td>";
-                        echo "<td class='col col-5' data-label='DOB'>" . $row['dob'] . "</td>";
-                        echo "<td class='col col-6' data-label='Gender'>" . $row['gender'] . "</td>";
-                        echo "<td class='col col-7' data-label='Diagnosis'>" . $row['diagnosis'] . "</td>";
-                        echo "<td class='col col-8' data-label='Address'>" . $row['address'] . "</td>";
-                        echo "</tr>";
-                    }
-                } else {
-                    echo "<tr><td colspan='8'>No data available</td></tr>";
-                }
-                ?>
-            </tbody>
+                    <tbody>
+                        <?php
+                        // Check if there are any rows returned
+                        if ($result->num_rows > 0) {
+                            // Loop through each row and display data
+                            while ($row = $result->fetch_assoc()) {
+                                echo "<tr class='table-row'>";
+                                echo "<td class='col col-1' data-label='Name'>" . $row['name'] . "</td>";
+                                echo "<td class='col col-2' data-label='Surname'>" . $row['surname'] . "</td>";
+                                echo "<td class='col col-3' data-label='Phone Number'>" . $row['number'] . "</td>";
+                                echo "<td class='col col-4' data-label='Email'>" . $row['email'] . "</td>";
+                                echo "<td class='col col-5' data-label='DOB'>" . $row['dob'] . "</td>";
+                                echo "<td class='col col-6' data-label='Gender'>" . $row['gender'] . "</td>";
+                                echo "<td class='col col-7' data-label='Diagnosis'>" . $row['diagnosis'] . "</td>";
+                                echo "<td class='col col-8' data-label='Address'>" . $row['address'] . "</td>";
+                                echo "</tr>";
+                            }
+                        } else {
+                            echo "<tr><td colspan='8'>No data available</td></tr>";
+                        }
+                        ?>
+                    </tbody>
             </table>
-            </div>
-            <!-- Pagination links -->
-            <div class="pagination">
-                <?php
-                // Determine total number of pages
-                $query = "SELECT COUNT(*) AS total FROM patient";
-                $result = $con->query($query);
-                $row = $result->fetch_assoc();
-                $total_pages = ceil($row['total'] / $results_per_page);
-
-                // Display pagination links
-                ?>
-    <a <?php echo ($page <= 1) ? 'class="disabled"' : ''; ?> href="<?php echo ($page <= 1) ? '#' : 'Patient-table.php?page=' . ($page - 1); ?>">&laquo; Previous</a>
-    <a <?php echo ($page >= $total_pages) ? 'class="disabled"' : ''; ?> href="<?php echo ($page >= $total_pages) ? '#' : 'Patient-table.php?page=' . ($page + 1); ?>">Next &raquo;</a>
-            </div>
         </div>
-   </div>
+        <!-- Pagination links -->
+        <div class="pagination">
+            <?php
+            // Determine total number of pages
+            $query = "SELECT COUNT(*) AS total FROM patient";
+            $result = $con->query($query);
+            $row = $result->fetch_assoc();
+            $total_pages = ceil($row['total'] / $results_per_page);
+
+            // Display pagination links
+            ?>
+            <a <?php echo ($page <= 1) ? 'class="disabled"' : ''; ?> href="<?php echo ($page <= 1) ? '#' : 'Patient-table.php?page=' . ($page - 1); ?>">&laquo; Previous</a>
+            <a <?php echo ($page >= $total_pages) ? 'class="disabled"' : ''; ?> href="<?php echo ($page >= $total_pages) ? '#' : 'Patient-table.php?page=' . ($page + 1); ?>">Next &raquo;</a></div>
+        </div>
+    </div>
    <script>
     document.getElementById("add-patient-btn").addEventListener("click", function() {
         window.location.href="Patient.php";
