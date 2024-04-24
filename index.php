@@ -31,61 +31,23 @@
 </html>
 
 <?php
-require_once'connection.php';
+require_once 'connection.php';
 
+if(isset($_POST['submit'])) {
+    $username = $_POST['username'];
+    $password = $_POST['password'];
 
+    // Hash the password
+    $hashed_password = password_hash($password, PASSWORD_DEFAULT);
 
-$username  = $password= " ";
-
-
-
-if(isset($_POST['username']))
-
-{
-
-   $username= $_POST['username'];
-
-
-   $password = $_POST['password'];
-
-
-
-
+    // Prepare and execute SQL statement
+    $query = $con->prepare("INSERT INTO logging (username, password) VALUES (?, ?)");
+    $query->bind_param("ss", $username, $hashed_password);
+    
+    if($query->execute()) {
+        echo "<script>alert('Information successfully submitted!');</script>";
+    } else {
+        echo "<script>alert('Error: " . $con->error . "');</script>";
+    }
 }
-
-
-if(isset($_POST['submit']))
-
-{
-
-
-
-$query = "INSERT INTO logging(username,password)VALUES('$username','$password')";
-
-
-
-$result = $con->query($query);
-
-
-
-if(!$result)
-
- {die($con->error);
-
-
-
-}
-
-else
-
-{
-
-
-
-echo"alert('Information successfully submitted!')";
-
-}
-
-}
-
 ?>
