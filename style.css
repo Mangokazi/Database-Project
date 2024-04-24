@@ -302,6 +302,35 @@ h3.logo {
 
 }
 
+/* Pagination */
+
+.pagination {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+}
+
+.pagination a {
+  display: inline-block;
+  padding: 8px 16px;
+  margin: 0 4px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  text-decoration: none;
+  color: #333;
+}
+
+.pagination a:hover {
+  background-color: #f4f4f4;
+}
+
+.pagination .disabled {
+  pointer-events: none;
+  opacity: 0.5;
+}
+
 /* index.php css*/
 
 #btn{

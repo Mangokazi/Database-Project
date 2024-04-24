@@ -6,8 +6,19 @@ if ($con->connect_error) {
     die("Connection failed: " . $con->connect_error);
 }
 
+// Pagination logic
+$results_per_page = 8; // Number of results per page
+if (!isset($_GET['page']) || !is_numeric($_GET['page']) || $_GET['page'] < 1) {
+    $page = 1; // Default page number
+} else {
+    $page = $_GET['page'];
+}
+
+$start_from = ($page - 1) * $results_per_page; // Calculate starting point for fetching results
+
+
 // Fetch data from the database
-$query = "SELECT * FROM patient";
+$query = "SELECT * FROM patient LIMIT $start_from, $results_per_page";
 $result = $con->query($query);
 
 // Check if the query was successful
@@ -91,8 +102,22 @@ if (!$result) {
                 }
                 ?>
             </tbody>
-            
             </table>
+            </div>
+            <!-- Pagination links -->
+            <div class="pagination">
+                <?php
+                // Determine total number of pages
+                $query = "SELECT COUNT(*) AS total FROM patient";
+                $result = $con->query($query);
+                $row = $result->fetch_assoc();
+                $total_pages = ceil($row['total'] / $results_per_page);
+
+                // Display pagination links
+                ?>
+    <a <?php echo ($page <= 1) ? 'class="disabled"' : ''; ?> href="<?php echo ($page <= 1) ? '#' : 'Patient-table.php?page=' . ($page - 1); ?>">&laquo; Previous</a>
+    <a <?php echo ($page >= $total_pages) ? 'class="disabled"' : ''; ?> href="<?php echo ($page >= $total_pages) ? '#' : 'Patient-table.php?page=' . ($page + 1); ?>">Next &raquo;</a>
+            </div>
         </div>
    </div>
    <script>
