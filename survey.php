@@ -66,7 +66,7 @@
                     <option value="other">Other</option>
                 </select>
                 </br>
-                <input type="text" name="other-chronic-disease" id="other-chronic-disease" placeholder="Enter other chronic disease" style="display: none;">
+                <input type="text" name="other_chronic_disease" id="other-chronic-disease" placeholder="Enter other chronic disease" style="display: none;">
             </td>
         </tr>
             <tr>
@@ -266,7 +266,8 @@ require_once 'connection.php';
 
 if(isset($_POST['save'])) {
     $illness = $_POST['illness'];
-    $chronic_disease_list = $_POST['chronic_disease_list'];
+   $chronic_disease_list=$_POST['chronic_disease_list'];
+   $other_chronic_disease= $_POST['other_chronic_disease'];
     $hospital_visits = $_POST['hospital_visits'];
     $hospital_checkUps = $_POST['hospital_checkUps'];
     $causes = $_POST['causes'];
@@ -280,8 +281,8 @@ if(isset($_POST['save'])) {
     $defaulted_reasons = $_POST['defaulted_reason'];
 
     // Prepare and bind the SQL statement
-    $stmt = $con->prepare("INSERT INTO survey (illness,chronic_disease_list, hospital_visits, hospital_checkUps, causes, check_ups, Treatment, obtain_medication, medication, facilities, queues, defaulted_medication, defaulted_reasons) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
-    $stmt->bind_param("ssssssssssss", $illness,  $chronic_disease_list,$hospital_visits, $hospital_checkUps, $causes, $check_ups, $treatment, $obtain_medication, $medication, $facilities, $queues, $defaulted_medication, $defaulted_reasons);
+    $stmt = $con->prepare("INSERT INTO survey (illness,chronic_desease_list,other_chronic_disease, hospital_visits, hospital_checkUps, causes, check_ups, Treatment, obtain_medication, medication, facilities, queues, defaulted_medication, defaulted_reasons) VALUES (?,?,?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
+    $stmt->bind_param("ssssssssssssss", $illness,  $chronic_disease_list,$other_chronic_disease,$hospital_visits, $hospital_checkUps, $causes, $check_ups, $treatment, $obtain_medication, $medication, $facilities, $queues, $defaulted_medication, $defaulted_reasons);
 
     // Execute the statement
     if($stmt->execute()) {
