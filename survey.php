@@ -39,7 +39,7 @@
                 </li>
             </ul>
         </div>
-        <form action="/submit_survey" method="post" id="survey_form">
+        <form  method="post" id="survey_form">
         <h3>Medical Survey</h3>
         <table class="survey_table">
             <tr>
@@ -88,10 +88,10 @@
                     </br>
                     <select name="hospital_checkUps" id="hospital_check-ups">
                         <option selected hidden value="">--Select--</option>
-                        <option value="">Once a month</option>
-                        <option value="">Once every 2 months</option>
-                        <option value="">Once every 4 months</option>
-                        <option value="">Every 6 months</option>
+                        <option value="Once a month">Once a month</option>
+                        <option value="Once every 2 months ">Once every 2 months</option>
+                        <option value="Once every 4 months">Once every 4 months</option>
+                        <option value="Every 6 months">Every 6 months</option>
                     </select>
                 </td>
             </tr>
@@ -114,10 +114,10 @@
                     </br>
                     <select name="check_ups" id="check-ups">
                         <option selected hidden value="">--Select--</option>
-                        <option value="">Once a month</option>
-                        <option value="">Once every 2 months</option>
-                        <option value="">Once every 4 months</option>
-                        <option value="">Every 6 months</option>
+                        <option value="Once a month">Once a month</option>
+                        <option value="Once every 2 months">Once every 2 months</option>
+                        <option value="Once every 4 months">Once every 4 months</option>
+                        <option value="Every 6 months">Every 6 months</option>
                     </select>
                 </td>
             </tr>
@@ -259,80 +259,41 @@
     </script>
 </body>
 </html>
+
+
 <?php
+require_once 'connection.php';
 
-
-
-require_once'connection.php';
-
-
-
-$illness = $hospital_visits = $hospital_checkups= $causes = $check_ups= $treatment = $obtain_medication= $medication=$facilities= $queues= $defaulted_medication=$defaulted_reasons=" ";
-
-
-
-if(isset($_POST['illness']))
-
-{
-
+if(isset($_POST['save'])) {
     $illness = $_POST['illness'];
-
-	$hospital_visits= $_POST['hospital_visits'];
-
-	$hospital_checkups= $_POST['hospital_checkups'];
-
-	$causes= $_POST['causes'];
-    $check_ups= $_POST['check_ups'];   
+    $hospital_visits = $_POST['hospital_visits'];
+    $hospital_checkUps = $_POST['hospital_checkUps'];
+    $causes = $_POST['causes'];
+    $check_ups = $_POST['check_ups'];
     $treatment = $_POST['treatment'];
+    $obtain_medication = $_POST['obtain_medication'];
+    $medication = $_POST['medication'];
+    $facilities = $_POST['facilities'];
+    $queues = $_POST['queues'];
+    $defaulted_medication = $_POST['defaulted_medication'];
+    $defaulted_reasons = $_POST['defaulted_reason'];
 
-	$obtain_medication= $_POST['obtain_medication'];
+    // Prepare and bind the SQL statement
+    $stmt = $con->prepare("INSERT INTO survey (illness, hospital_visits, hospital_checkUps, causes, check_ups, Treatment, obtain_medication, medication, facilities, queues, defaulted_medication, defaulted_reasons) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
+    $stmt->bind_param("ssssssssssss", $illness, $hospital_visits, $hospital_checkUps, $causes, $check_ups, $treatment, $obtain_medication, $medication, $facilities, $queues, $defaulted_medication, $defaulted_reasons);
 
-	$medication= $_POST['medication'];
+    // Execute the statement
+    if($stmt->execute()) {
+        echo "<script>alert('Information successfully submitted!');</script>";
+    } else {
+        echo "<script>alert('There was an issue uploading your details, please try again or contact an administrator');</script>";
+    }
 
-	$facilities= $_POST['facilities'];
-    $queues= $_POST['queues'];
-
-	$defaulted_medication= $_POST['defaulted_medication'];
-
-	$defaulted_reasons= $_POST['defaulted_reasons'];
-   
-
-
-
+    // Close statement
+    $stmt->close();
 }
 
-
-
-if(isset($_POST['save']))
-
-{
-
-
-
-$query = "INSERT INTO survey(illness,hospital_visits,hospital_checkups,causes,check_ups,treatment,obtain_medication,medication,facilities,queuesdefaulted_medication,defaulted_reasons)VALUES('$illness','$hospital_visits',' $hospital_checkups','$causes','$check_ups',' $treatment',' $obtain_medication','$medication','$facilities'' $queues','$defaulted_medication','$defaulted_reasons')";
-
-
-
-$result = $con->query($query);
-
-
-
-if(!$result)
-
-{die($con->error);
-    echo"alert('There was an issue uploading your details,please try again or contact an administrator')";
-
-}
-
-else
-
-{
-
-
-
-echo"alert('Information successfully submitted!')";
-
-}
-
-}
+// Close connection
+$con->close();
+?>
 
