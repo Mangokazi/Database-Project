@@ -1,17 +1,17 @@
-<html>
+       
+  <html>
     <head>
         <title>Login</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" type="text/css" href="style.css">
-       
-    </head>
+         </head>
     <body class="header">
         <div id="form1">
             <h1>Login Details</h1>
-            <form name="form"  method="POST" action="Patient-table.html">
-                <input type="text" id="user" name="username" placeholder="username" required></br></br>
-                <input type="password" id="pass" name="password" placeholder = "password" required></br></br>
-                <input type="submit" id="btn" value="Login" name = "submit"/>
+            <form name="form"  method="POST" >
+                <input type="text" id="user" name="username" placeholder="username"></br></br>
+                <input type="password" id="pass" name="password" placeholder = "password"></br></br>
+                <a href="patient-table.php" id="btn" name ="save">Login</a>
                     <div id="labels">
                         <div>
                             <label for="register">Not registered?</label>
@@ -24,25 +24,60 @@
         </div>
     </body> 
 </html>
-
 <?php
-require_once 'connection.php';
+require_once'connection.php';
 
-if(isset($_POST['submit'])) {
-    $username = $_POST['username'];
-    $password = $_POST['password'];
 
-    // Hash the password
-    $hashed_password = password_hash($password, PASSWORD_DEFAULT);
 
-    // Prepare and execute SQL statement
-    $query = $con->prepare("INSERT INTO logging (username, password) VALUES (?, ?)");
-    $query->bind_param("ss", $username, $hashed_password);
-    
-    if($query->execute()) {
-        echo "<script>alert('Information successfully submitted!');</script>";
-    } else {
-        echo "<script>alert('Error: " . $con->error . "');</script>";
-    }
+$username  = $password= " ";
+
+
+
+if(isset($_POST['submit']))
+
+{
+
+   $username= $_POST['username'];
+
+
+   $password = $_POST['password'];
+
+ 
+
+
+
 }
+
+
+if(isset($_POST['save']))
+
+{
+
+
+
+    $query = "INSERT INTO logging (username, password) VALUES ('$username', '$password')";
+
+$result = $con->query($query);
+if(!$result)
+
+ 
+{
+    die($con->error);
+
+    
+
+}
+
+else
+
+{
+
+
+
+echo"alert('Information successfully submitted!')";
+
+}
+
+}
+
 ?>

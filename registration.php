@@ -34,7 +34,7 @@
 <body class="header">
     <div id="form1">
         <h1>Register</h1>
-        <form name="form" method="post" action="index.html" onsubmit="return validatePasswords()">
+        <form name="form" method="post"  onsubmit="return validatePasswords()">
             <input type="text" id="first" name="first_name" placeholder="First Name" required><br><br>
             <input type="text" id="last" name="last_name" placeholder="Last Name" required><br><br>
             <input type="password" id="pass" name="password" placeholder="Password" oninput="setPassword();"><br><br>
@@ -42,7 +42,7 @@
             <input type="submit" id="btn" value="Register" name="submit">
             <div id="labels">
                 <div>
-                    <a href="index.html"><label for="login"><span>Back</span></label></a>
+                    <a href="index.php"><label for="login"><span>Back</span></label></a>
                 </div>
             </div>
         </form>
