@@ -8,12 +8,12 @@
     <body class="header">
         <div id="form1">
             <h1>Register</h1>
-            <form name="form"  method="post" action= "index.php">
-                <input type="text" id="first" name="first_name" placeholder = "First Name"></br></br>
-                <input type="text" id="last" name="last_name" placeholder = "Last Name"></br></br>
-                <input type="password" id="pass" name="password" placeholder="Password"></br></br>
-                <input type="password" id="con-pass" name="confirm_password" placeholder="Confirm Password"></br></br>
-                <input type="submit" id="btn" value="Register" name = "submit"/>
+            <form name="form"  method="post" >
+                <input type="text"  name="first_name" placeholder = "First Name"></br></br>
+                <input type="text"  name="last_name" placeholder = "Last Name"></br></br>
+                <input type="password"  name="password" placeholder="Password"></br></br>
+                <input type="password" name="confirm_password" placeholder="Confirm Password"></br></br>
+                <input type="submit" id="btn" value="Register" name = "submit" />
                 <div id="labels">
                     <div>
                         <a href="index.php"><label for="login"><span>Back</span></label></a>
@@ -26,10 +26,6 @@
 
 <?php
 require_once'connection.php';
-
-
-
-$username  = $password= " ";
 
 
 
