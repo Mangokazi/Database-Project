@@ -43,8 +43,8 @@ if(isset($_POST['submit'])) {
             </ul>
             </div>
         <div class="cont_text_inputs">
-            <input type="text" class="input_form_sign" placeholder="NAME" name="username" />
-            <input type="text" class="input_form_sign" placeholder="SURNAME" name="surname" />
+            
+            
             <input type="text" class="input_form_sign d_block active_inp" placeholder="EMAIL" name="email" />
             <input type="password" class="input_form_sign d_block  active_inp" placeholder="PASSWORD" name="password" />  
             <input type="password" class="input_form_sign" placeholder="CONFIRM PASSWORD" name="confirm_password" />
