@@ -337,7 +337,7 @@ h3.logo {
 
 #btn{
   color:rgb(255, 255, 255);
-  background-color: rgb(108, 22, 189);
+  background-color: rgba(52, 158, 151, 1);
   padding:10px;
   font-size: large;
   border-radius: 10px;
@@ -348,7 +348,7 @@ h3.logo {
   border-radius: 4px;
   margin:120px auto;
   padding:50px;
-  box-shadow: 10px 10px 5px rgb(82, 11, 77);
+  box-shadow: 10px 10px 5px rgba(52, 158, 151, 1);
   text-align: center;
 }
 @media screen and (max-width: 570px) {
