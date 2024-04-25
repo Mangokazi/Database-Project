@@ -3,7 +3,7 @@
         <title>Login</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" type="text/css" href="style.css">
-       
+        <!--<a href="index.php" class="btn btn--opacity">Login</a>-->
     </head>
     <body class="header">
         <div id="form1">
@@ -25,24 +25,3 @@
     </body> 
 </html>
 
-<?php
-require_once 'connection.php';
-
-if(isset($_POST['submit'])) {
-    $username = $_POST['username'];
-    $password = $_POST['password'];
-
-    // Hash the password
-    $hashed_password = password_hash($password, PASSWORD_DEFAULT);
-
-    // Prepare and execute SQL statement
-    $query = $con->prepare("INSERT INTO logging (username, password) VALUES (?, ?)");
-    $query->bind_param("ss", $username, $hashed_password);
-    
-    if($query->execute()) {
-        echo "<script>alert('Information successfully submitted!');</script>";
-    } else {
-        echo "<script>alert('Error: " . $con->error . "');</script>";
-    }
-}
-?>

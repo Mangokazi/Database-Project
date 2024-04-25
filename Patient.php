@@ -79,7 +79,7 @@
                     </tr>
                     <tr>
                         <td></td>
-                        <td><button type="submit" name ='submit'>Submit</button></td>
+                        <td><button type="submit" name ='submit' class="add_patient">Submit</button></td>
                     </tr>
                 </table>
             
