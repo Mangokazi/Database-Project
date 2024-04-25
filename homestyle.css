@@ -30,8 +30,19 @@ p{
 
 
 
-.btn--opacity {
-    animation: opacity 3s;
+.survey_btn {
+
+  width: 100px;
+  background-color: white;
+  color: black;
+  border: 2px solid #349E97;
+  position: absolute;
+  border-radius: 10px;
+  padding: 10px;
+  top: 65%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
 }
 
 .sect {
@@ -167,7 +178,9 @@ BANNER
 .banner__container {
     display: table-cell;
     vertical-align: middle;
+    position: relative; /* Add this line to make sure the button is positioned relative to its container */
 }
+
 
 .banner__scroll-down {
     position: absolute;
@@ -176,6 +189,7 @@ BANNER
     margin-left: -12px;
     cursor: pointer;
     animation: opacity 3s;
+
 }
 
 .banner__title {
