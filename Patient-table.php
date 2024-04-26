@@ -39,12 +39,9 @@ if (!$result) {
    <div class="header">
         <div class="side-nav">
             <div class="user">
-                <img src="Images/user.png" class="user-img">
                 <div>
-                    <h2>David M</h2>
-                    <p>davidm@xyz.com</p>
+                    <h2>Ardaciti</h2>
                 </div>
-                <img src="Images/star.png" class="star-img">
             </div>
             <ul>
                 <li><img src="Images/dashboard.png" alt=""><p>Dashboard</p></li>
@@ -78,6 +75,7 @@ if (!$result) {
                         <th class="col col-6">Gender</th>
                         <th class="col col-7">Diagnosis</th>
                         <th class="col col-8">Address</th>
+                        <th class="col col-9">Date</th>
                     </tr>
                 </thead>
                     <tbody>
@@ -95,6 +93,7 @@ if (!$result) {
                                 echo "<td class='col col-6' data-label='Gender'>" . $row['gender'] . "</td>";
                                 echo "<td class='col col-7' data-label='Diagnosis'>" . $row['diagnosis'] . "</td>";
                                 echo "<td class='col col-8' data-label='Address'>" . $row['address'] . "</td>";
+                                echo "<td class='col col-9' data-label='Date'>" . $row['date'] . "</td>";
                                 echo "</tr>";
                             }
                         } else {

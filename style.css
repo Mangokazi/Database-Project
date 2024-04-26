@@ -87,12 +87,12 @@ body.header{
   background-image: url(Images/bg1.png);
 }
 .side-nav {
-  width: 110px;
+  width: 100px;
   height: 100%;
   position: fixed;
   top: 0;
   left: 0;
-  padding: 30px 20px;
+  padding: 30px 10px;
   background: rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(5px);
   display: flex;
@@ -104,8 +104,7 @@ body.header{
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 60px;
-  font-size: 12px;
+  width: 50px;
   padding: 10px;
   border-radius: 8px;
   margin-left: auto;
@@ -149,22 +148,22 @@ ul li p {
   display: none;
 }
 .side-nav:hover {
-  width: 250px;
+  width: 150px;
 }
 .side-nav:hover .user div {
   display: block;
 }
 .side-nav:hover .user {
-  width: 100%;
+  width: 30px;
   background: rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(5px);
 }
-.side-nav:hover .star-img {
+/*.side-nav:hover .star-img {
   display: block;
 }
 .side-nav:hover .user-img {
   margin: 0;
-}
+}*/
 .side-nav:hover ul li p {
   display: block;
 }
