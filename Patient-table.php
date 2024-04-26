@@ -40,7 +40,7 @@ if (!$result) {
         <div class="side-nav">
             <div class="user">
                 <div>
-                    <h2>Ardaciti</h2>
+                    <h2>Ardaciti </br> Medicentre</h2>
                 </div>
             </div>
             <ul>
@@ -54,7 +54,9 @@ if (!$result) {
                 </li></a>
             </ul>
             <ul>
-                <li><img src="Images/logout.png" alt=""><p>Logout</p></li>
+                <li><img src="Images/logout.png" alt="">
+                    <a href="Landing_Page"><p>Logout</p></a>
+                </li>
             </ul>
         </div>
         <div>

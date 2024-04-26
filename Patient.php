@@ -11,7 +11,7 @@
         <div class="side-nav">
             <div class="user">
                 <div>
-                    <h2>Ardaciti</h2>
+                    <h2>Ardaciti</br> Medicentre</h2>
                 </div>
             </div>
             <ul>
@@ -30,7 +30,7 @@
             </ul>
             <ul>
                 <li><img src="Images/logout.png" alt="">
-                    <p>Logout</p>
+                    <a href="Landing_Page.php"><p>Logout</p></a>
                 </li>
             </ul>
         </div>

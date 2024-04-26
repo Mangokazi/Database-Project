@@ -154,16 +154,16 @@ ul li p {
   display: block;
 }
 .side-nav:hover .user {
-  width: 30px;
+  width: 100px;
   background: rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(5px);
 }
-/*.side-nav:hover .star-img {
+.side-nav:hover .star-img {
   display: block;
 }
 .side-nav:hover .user-img {
   margin: 0;
-}*/
+}
 .side-nav:hover ul li p {
   display: block;
 }
