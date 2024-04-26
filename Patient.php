@@ -76,7 +76,7 @@
                     </tr>
                     <tr>
                         <td><label for="date">Date:</label></td>
-                        <td><textarea id="date" name="date" type="date" required></textarea></td>
+                        <td><input id="date" name="date" type="date" required></input></td>
                     </tr>
                     <tr>
                         <td></td>
@@ -118,7 +118,7 @@ if(isset($_POST['name']))
 	$diagnosis= $_POST['diagnosis'];
 
 	$address= $_POST['address'];
-
+	$date= $_POST['date'];
 
 
 }
@@ -131,7 +131,7 @@ if(isset($_POST['submit']))
 
 
 
-$query = "INSERT INTO patient(name,surname,number,email,dob,gender,diagnosis,address)VALUES('$name','$surname',' $number','$email',' $dob',' $gender','$diagnosis','$address')";
+$query = "INSERT INTO patient(name,surname,number,email,dob,gender,diagnosis,address, date)VALUES('$name','$surname',' $number','$email',' $dob',' $gender','$diagnosis','$address','$date')";
 
 
 
