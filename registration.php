@@ -35,8 +35,8 @@
     <div id="form1">
         <h1>Register</h1>
         <form name="form" method="post"  onsubmit="return validatePasswords()">
-            <input type="text" id="first" name="first_name" placeholder="First Name" required><br><br>
-            <input type="text" id="last" name="last_name" placeholder="Last Name" required><br><br>
+            <input type="email" id="username" name="username" placeholder="Username" required><br><br>
+            
             <input type="password" id="pass" name="password" placeholder="Password" oninput="setPassword();"><br><br>
             <input type="password" id="con-pass" name="confirm_password" placeholder="Confirm Password" oninput="updateConfirmPassword(this.value)"><br><br>
             <input type="submit" id="btn" value="Register" name="submit">
@@ -55,7 +55,7 @@ require_once'connection.php';
 
 
 
-$username  = $password= " ";
+
 
 
 
@@ -63,10 +63,10 @@ if(isset($_POST['submit']))
 
 {
 
-   $first_name= $_POST['first_name'];
+   $username= $_POST['username'];
 
 
-   $last_name = $_POST['last_name'];
+   
 
    $password= $_POST['password'];
 
@@ -84,7 +84,7 @@ if(isset($_POST['submit']))
 
 
 
-    $query = "INSERT INTO registration (first_name, last_name, password, confirm_password) VALUES ('$first_name', '$last_name', '$password', '$confirm_password')";
+    $query = "INSERT INTO registration (username, password, confirm_password) VALUES ('$username', '$password', '$confirm_password')";
 
 $result = $con->query($query);
 if(!$result)
