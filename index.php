@@ -8,10 +8,11 @@
     <body class="header">
         <div id="form1">
             <h1>Login Details</h1>
-            <form name="form"  method="POST" >
-                <input type="text" id="user" name="username" placeholder="username"></br></br>
-                <input type="password" id="pass" name="password" placeholder = "password"></br></br>
-                <a href="patient-table.php" id="btn" name ="save">Login</a>
+            <form name="form1"  method="post" >
+                <input type="text" id="username" name="username" placeholder="username"></br></br>
+                <input type="password" id="password" name="password" placeholder = "password"></br></br>
+               <input type="submit" id="btn" value="Submit" name="submit">
+
                     <div id="labels">
                         <div>
                             <label for="register">Not registered?</label>
@@ -20,64 +21,46 @@
                             <a href="registration.php"><label>Create an account</label></a>
                         </div>
                     </div>
+                    
             </form>
         </div>
     </body> 
 </html>
+
+
+
 <?php
-require_once'connection.php';
+ require_once'connection.php';
+// Check if the form is submitted
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Retrieve form data
+    $username = $_POST['username'];
+    $password = $_POST['password'];
+   
+  
 
+    // Query to check if the username and password match
+    $sql = "SELECT * FROM registration WHERE username='$username' AND password='$password'";
+    $result = $con->query($sql);
 
+    if ($result->num_rows == 1) {
+        // Authentication successful
+        // Insert username into the "login" table
+        $insert_sql = "INSERT INTO logging (username,password) VALUES ('$username','$password')";
+        if ($con->query($insert_sql) === TRUE) {
+            // Redirect the user to another page
+            header("Location: patient.php");
+            exit();
+        } else {
+            
+             // Error inserting login record
+             echo "<script>alert('Error inserting login record: " . $con->error . "');</script>";
+        }
+    } else {
+        // Authentication failed
+        echo "<script>alert('Invalid username or password. Please try again.');</script>";
+    }
 
-$username  = $password= " ";
-
-
-
-if(isset($_POST['submit']))
-
-{
-
-   $username= $_POST['username'];
-
-
-   $password = $_POST['password'];
-
- 
-
-
-
+    $con->close(); // Close the connection
 }
-
-
-if(isset($_POST['save']))
-
-{
-
-
-
-    $query = "INSERT INTO logging (username, password) VALUES ('$username', '$password')";
-
-$result = $con->query($query);
-if(!$result)
-
- 
-{
-    die($con->error);
-
-    
-
-}
-
-else
-
-{
-
-
-
-echo"alert('Information successfully submitted!')";
-
-}
-
-}
-
 ?>
