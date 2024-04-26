@@ -10,12 +10,9 @@
     <div class="header">
         <div class="side-nav">
             <div class="user">
-                <img src="Images/user.png" class="user-img">
                 <div>
                     <h2>Ardaciti</h2>
-                    <p>ardacitim@xyz.com</p>
                 </div>
-                <img src="Images/star.png" class="star-img">
             </div>
             <ul>
                 <li><img src="Images/dashboard.png" alt="">
@@ -71,11 +68,15 @@
                     </tr>
                     <tr>
                         <td><label for="diagnosis">Diagnosis:</label></td>
-                        <td><input type="text" id="diagnosis" name="diagnosis"></td>
+                        <td><input type="text" id="diagnosis" name="diagnosis" required></td>
                     </tr>
                     <tr>
                         <td><label for="address">Address:</label></td>
                         <td><textarea id="address" name="address" type="text" required></textarea></td>
+                    </tr>
+                    <tr>
+                        <td><label for="date">Date:</label></td>
+                        <td><textarea id="date" name="date" type="date" required></textarea></td>
                     </tr>
                     <tr>
                         <td></td>

@@ -15,7 +15,7 @@
       <div class="banner__container">
         <h1 class="banner__title">Ardaciti Medicentre</h1>
         <p class="banner__text">A better way to practice care</p>
-        <a href="index.html" class="survey_btn">Login</a>
+        <a href="index.php" class="survey_btn">Login</a>
       </div>
       
       </div>
