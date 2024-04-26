@@ -1,33 +1,53 @@
-       
-  <html>
+<!DOCTYPE html>
+    <html lang="en">
     <head>
-        <title>Login</title>
+        <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" type="text/css" href="style.css">
-         </head>
-    <body class="header">
-        <div id="form1">
-            <h1>Login Details</h1>
-            <form name="form1"  method="post" >
-                <input type="text" id="username" name="username" placeholder="username"></br></br>
-                <input type="password" id="password" name="password" placeholder = "password"></br></br>
-               <input type="submit" id="btn" value="Submit" name="submit">
+        <title>Login Page</title>
+    </head>
+        <body class="header">
+            <div id="form1">
+                <h1>Login Details</h1>
+                    <form name="form" method="POST" action="Patient-table.html" onsubmit="return validateForm()">
+                        <input type="email" id="user" name="username" placeholder="Username" required><br><br>
+                        <input type="password" id="pass" name="password" placeholder="Password" required><br><br>
+                        <input type="submit" id="btn" value="Login" name="submit">
+                            <div id="labels">
+                                <div>
+                                    <label for="register">Not registered?</label>
+                                </div>
+                                <div class="account">
+                                    <a href="registration.php"><label>Create an account</label></a>
+                                </div>
+                            </div>
+                    </form>
+            </div>
+        </body>
+    </html>
 
-                    <div id="labels">
-                        <div>
-                            <label for="register">Not registered?</label>
-                        </div>
-                        <div class="account">
-                            <a href="registration.php"><label>Create an account</label></a>
-                        </div>
-                    </div>
-                    
-            </form>
-        </div>
-    </body> 
-</html>
-
-
+    <script>
+        function validatePassword(password) {
+            // Check if password length is not more than 10 characters
+            if (password.length > 10) {
+                alert("Password must be 10 characters or less.");
+                return false;
+            }
+            // Check if password contains at least one special character
+            var regex = /[!@#$%^&*()_+{}\[\]:;<>,.?~`\-="']/;
+            if (!regex.test(password)) {
+                alert("Password must contain at least one special character.");
+                return false;
+            }
+            // Password is valid
+            return true;
+        }
+ 
+        function validateForm() {
+            var password = document.getElementById("pass").value;
+            return validatePassword(password);
+        }
+    </script>
 
 <?php
  require_once'connection.php';
