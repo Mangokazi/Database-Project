@@ -16,7 +16,7 @@
             </div>
             <ul>
                 <li><img src="Images/dashboard.png" alt="">
-                    <p>Dashboard</p>
+                    <a href="http://127.0.0.1:8050/"><p>Dashboard</p></a>
                 </li>
                 <a href="Patient-table.php"><li><img src="Images/members.png" alt="">
                     <p>Patients</p>

@@ -1,0 +1,22 @@
+"illness","chronic_desease_list","other_chronic_disease","hospital_visits","hospital_checkUps","causes","check_ups","Treatment","obtain_medication","medication","facilities","queues","defaulted_medication","defaulted_reasons"
+"yes","cancer",,"once_2_months","Once a month","other","Once a month","never","never","yes","yes","no","no",
+"no",,,"once_months","Once a month","transportation","Once a month","rarely","never","no","yes","yes","yes","side_effects"
+"yes","other","HIV","once_4_months","Once every 2 months ","financial_constraints","Once a month","often","rarely","no","yes","yes","no",
+"yes","asthma",,"once_2_months","Once a month","transportation","Once a month","sometimes","often","not_sure","yes","yes","yes","side_effects"
+"yes","high_blood_pressure",,"once_2_months","Once a month","transportation","Once a month","rarely","rarely","yes","no",,"no",
+"yes","arthritis",,"once_2_months","Once a month","financial_constraints","Once every 4 months","never","rarely","not_sure","no","yes","no",
+"yes","asthma",,"once_2_months","Once every 2 months ","financial_constraints","Once every 4 months","never","never","yes","yes","yes","yes","stigma"
+"yes","cancer",,"every_6_months",,"denial_diagnosis","Once every 2 months","rarely","never","no","yes","yes","yes","side_effects"
+"yes","high_blood_pressure",,"once_4_months","Once a month","transportation","Once every 2 months","rarely","rarely","yes","yes","yes","yes","stigma"
+"yes","high_blood_pressure",,"once_4_months","Once a month","transportation","Once every 2 months","rarely","rarely","yes","yes","yes","yes","stigma"
+"yes","cancer",,"once_2_months","Once every 2 months ","financial_constraints","Once every 2 months","rarely","always","yes","yes","yes","yes","awareness"
+"yes","arthritis",,"once_2_months","Once every 2 months ","financial_constraints","Once every 4 months","rarely","sometimes","yes","yes","yes","yes","awareness"
+"yes","arthritis",,"once_4_months","Once every 4 months","financial_constraints","Once every 2 months","rarely","often","not_sure","no","yes","yes","cost"
+"yes","other","HIV","once_4_months","Once every 4 months","financial_constraints","Once every 4 months","sometimes","rarely","no","no","yes","no",
+"yes","other","TB","once_4_months","Once every 4 months","denial_diagnosis","Once every 4 months","sometimes","never","yes","no","yes","yes","stigma"
+"yes","other","TB","once_2_months","Once every 2 months ","financial_constraints","Once every 2 months","sometimes","sometimes","yes","yes","yes","yes","cost"
+"yes","other","HIV","once_2_months","Once every 4 months","financial_constraints","Once every 4 months","often","often","not_sure","yes","yes","yes","stigma"
+"yes","other","TB","once_4_months","Once every 4 months","financial_constraints","Once every 4 months","sometimes","often","not_sure","yes","yes","no",
+"yes","arthritis",,,"Every 6 months","other","Once every 4 months","sometimes","rarely","yes","yes","yes","yes","stigma"
+"yes","cancer",,"once_months","Once every 2 months ","financial_constraints","Once every 2 months","often","often","yes","yes","yes","yes","stigma"
+"yes","arthritis",,,"Every 6 months","denial_diagnosis","Every 6 months","often","often","no","yes","yes","yes","stigma"
