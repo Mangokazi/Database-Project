@@ -131,6 +131,21 @@ app.layout = html.Div([
             dcc.Graph(figure=fig_stacked_bar),
             width={'size': 6, 'offset': 0}
         )
+    ]),
+     html.Div([
+        dcc.Link('Back', href='http://localhost/Database-project/Patient.php', target='_blank', style={
+            'width': '200px',
+            'background-color': 'white',
+            'color': 'black',
+            'border': '2px solid #349E97',
+            'position': 'absolute',
+            'border-radius': '10px',
+            'padding': '10px',
+            'margin-top': '15px',
+            'margin-left': '15px',
+            'text-align': 'center',
+            'textDecoration': 'none'
+        })
     ])
 ])
 
