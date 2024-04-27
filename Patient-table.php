@@ -40,11 +40,13 @@ if (!$result) {
         <div class="side-nav">
             <div class="user">
                 <div>
-                    <h2>Ardaciti </br> Medicentre</h2>
+                    <h2 class="name">Ardaciti </br> Medicentre</h2>
                 </div>
             </div>
             <ul>
-                <li><img src="Images/dashboard.png" alt=""><p>Dashboard</p></li>
+                <li><img src="Images/dashboard.png" alt="">
+                    <a href="http://127.0.0.1:8050/"><p>Dashboard</p></a>
+                </li>
                 <a href="Patient-table.php"><li><img src="Images/members.png" alt="">
                     <p>Patients</p>
                 </li></a>
@@ -55,7 +57,7 @@ if (!$result) {
             </ul>
             <ul>
                 <li><img src="Images/logout.png" alt="">
-                    <a href="Landing_Page"><p>Logout</p></a>
+                    <a href="Landing_Page.php"><p>Logout</p></a>
                 </li>
             </ul>
         </div>

@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
 <body class="header">
     <div class="header">
         <div class="side-nav">
             <div class="user">
                 <div>
-                    <h2>Ardaciti</br> Medicentre</h2>
+                    <h2 class="name">Ardaciti </br> Medicentre</h2>
                 </div>
             </div>
             <ul>
@@ -37,7 +37,7 @@
         <div class="form">
             <form id="add-patient-form" method="post">
                 <h3>Add Patient</h3>
-                <table>
+                <table class="patient-form-table">
                     <tr>
                         <td><label for="name">Name:</label></td>
                         <td><input type="text" id="name" name="name" required></td>
@@ -83,11 +83,8 @@
                         <td><button type="submit" name ='submit' class="add_patient">Submit</button></td>
                     </tr>
                 </table>
-            
-        </div>
-    </div>
-    </form>
-            
+            </form>
+        </div>    
 </body>
 </html>
 <?php
