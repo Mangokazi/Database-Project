@@ -11,7 +11,7 @@
   <div class="banner">
     <div class="banner__overlay">
       <div class="banner__container">
-        <h1 class="banner__title">Ardaciti Medicentre</h1>
+        <h1 class="banner__title">ArdaCiti Medicentre</h1>
           <p class="banner__text">A better way to practice care</p>
           <a href="index.php" class="survey_btn">Login</a>
       </div>

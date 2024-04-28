@@ -32,7 +32,7 @@ if (!$result) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <title>Patient-table</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body class="header">
@@ -40,20 +40,22 @@ if (!$result) {
         <div class="side-nav">
             <div class="user">
                 <div>
-                    <h2 class="name">Ardaciti </br> Medicentre</h2>
+                    <h2 class="name">ArdaCiti </br> Medicentre</h2>
                 </div>
             </div>
             <ul>
                 <li><img src="Images/dashboard.png" alt="">
                     <a href="http://127.0.0.1:8050/"><p>Dashboard</p></a>
                 </li>
-                <a href="Patient-table.php"><li><img src="Images/members.png" alt="">
-                    <p>Patients</p>
-                </li></a>
-                <li><img src="Images/reports.png" alt=""><p>Reports</p></li>
-                <a href="survey.php"><li><img src="Images/survey.png" alt="">
-                    <p>Survey</p>
-                </li></a>
+                <li><img src="Images/members.png" alt="">
+                    <a href="Patient-table.php"><p>Patients</p></a>
+                </li>
+                <li><img src="Images/reports.png" alt="">
+                    <a href="report.php"><p>Reports</p></a>
+                </li>
+                <li><img src="Images/survey.png" alt="">
+                    <a href="survey.php"><p>Survey</p></a>
+                </li>
             </ul>
             <ul>
                 <li><img src="Images/logout.png" alt="">
