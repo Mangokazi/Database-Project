@@ -333,7 +333,7 @@ h3.logo {
   padding: 10px;
   margin-top: 15px;
   margin-left: 150px;
-
+  text-decoration: none;
 }
 
 .survey_table label {
@@ -418,7 +418,5 @@ h3.logo {
   font-size: 16px;
   line-height: 1.5;
 }
-
-
 
 

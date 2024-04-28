@@ -9,7 +9,7 @@
         <body class="header">
             <div id="form1">
                 <h1>Login Details</h1>
-                    <form name="form" method="POST" action="Patient-table.html" onsubmit="return validateForm()">
+                    <form name="form" method="POST" onsubmit="return validateForm()">
                         <input type="email" id="user" name="username" placeholder="Username" required><br><br>
                         <input type="password" id="pass" name="password" placeholder="Password" required><br><br>
                         <input type="submit" id="btn" value="Login" name="submit">
