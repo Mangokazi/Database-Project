@@ -7,7 +7,7 @@ if ($con->connect_error) {
 }
 
 // Pagination logic
-$results_per_page = 6; // Number of results per page
+$results_per_page = 5; // Number of results per page
 if (!isset($_GET['page']) || !is_numeric($_GET['page']) || $_GET['page'] < 1) {
     $page = 1; // Default page number
 } else {
