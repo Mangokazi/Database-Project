@@ -414,9 +414,9 @@ h3.logo {
   margin-top: 40px;
 }
 
-.report-table p {
-  font-size: 16px;
-  line-height: 1.5;
+.report-info {
+  font-size: 20px;
+  font-weight: bold;
 }
 
 
