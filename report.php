@@ -39,14 +39,32 @@
             <table class="report-table">
                 <tr class="table-row">
                     <td>
-                        <h2>Introduction</h2>
-                            <p>In this report, we will analyze various aspects of our monthly performance and draw conclusions based on the data collected.</p>
+                        <h2>Diagnosis</h2>
+                            <p class="report-info">Based on the comparison of diagnosis the statistics showing that high number of people that are diagnosed from Cancer, HIV and Cancer.</p>
                     </td>
                 </tr>
                     <tr class="table-row">
                     <td>
-                        <h2>Sales Overview</h2>
-                            <p>Our sales for the month of April have shown a steady increase compared to the previous month. This can be attributed to...</p>
+                        <h2>Causes of missing check-up appointments</h2>
+                            <p class="report-info">Based on the collected number of causes that could be the the reason people no to go on their check up is mostly financial constraints.</p>
+                    </td>
+                </tr>
+                <tr class="table-row">
+                    <td>
+                        <h2>Comparisons of Diseases</h2>
+                            <p class="report-info">On our findings it is clear that people that are having other chronic diseases are high.</p>
+                    </td>
+                </tr>
+                <tr class="table-row">
+                    <td>
+                        <h2>Age and Gender</h2>
+                            <p class="report-info">Based on the findings, we have found out that there are different counts from certain age of different gender.</p>
+                    </td>
+                </tr>
+                <tr class="table-row">
+                    <td>
+                        <h2>Default Reasons</h2>
+                            <p class="report-info">Based on the accumulated findings it is clear that the default on number patients is caused mostly by a stigma problem other than other reasons. </p>
                     </td>
                 </tr>
             </table>
